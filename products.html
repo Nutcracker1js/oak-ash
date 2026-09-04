@@ -1,0 +1,3539 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Products — OAK & ASH</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header alt-header">
+      <div class="navbar container nav-row">
+        <button id="nav-toggle" aria-expanded="false" aria-label="Open menu">
+          ☰
+        </button>
+        <a class="logo" href="index.html">
+          <img
+            class="brand-logo"
+            src="IMAGES/Document-removebg-preview.png"
+            alt="OAK & ASH logo"
+          />
+        </a>
+ <div class="mobile-actions">
+          <button class="icon-btn" aria-label="Wishlist">♡</button>
+          <button class="icon-btn" aria-label="Cart">🛒</button>
+        </div>
+        <nav class="site-nav" id="site-nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="account.html">Account</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div
+        class="mobile-menu-overlay"
+        id="mobile-menu-overlay"
+        aria-hidden="true"
+      >
+        <div class="mobile-menu-inner">
+          <button
+            class="close-menu"
+            id="mobile-menu-close"
+            aria-label="Close menu"
+          >
+            ×
+          </button>
+          <div class="mobile-menu-links">
+            <a href="products.html">Products</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+          </div>
+          <div class="mobile-menu-footer">
+            <a href="account.html">Account</a>
+            <a href="favorites.html">Wishlist</a>
+            <a href="cart.html">Cart</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mini Cart -->
+      <div id="mini-cart" class="mini-cart" aria-hidden="true">
+        <div
+          class="mini-cart-panel"
+          id="mini-cart-panel"
+          role="dialog"
+          aria-label="Cart"
+        >
+          <header class="mini-cart-header">
+            <h3>Cart (<span id="mini-cart-count">0</span>)</h3>
+            <button
+              class="close-menu"
+              id="mini-cart-close"
+              aria-label="Close cart"
+            >
+              ×
+            </button>
+          </header>
+          <div class="mini-cart-items" id="mini-cart-items"></div>
+          <div class="mini-cart-footer">
+            <div class="mini-cart-subtotal">
+              Subtotal <strong id="mini-cart-subtotal">₦0</strong>
+            </div>
+            <div class="mini-cart-actions">
+              <a href="cart.html" class="btn">View Cart</a>
+              <button id="mini-cart-checkout" class="btn btn-primary">
+                Checkout
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="mini-cart-backdrop" id="mini-cart-backdrop"></div>
+      </div>
+    </header>
+
+    <main>
+      <section class="collection-hero container">
+        <div class="collection-hero-copy">
+          <h1>Elegant pieces for every room.</h1>
+          <p>
+            159 products organized into living, bedroom, dining, and office
+            collections with refined materials and curated silhouettes.
+          </p>
+        </div>
+        <div class="collection-hero-meta">
+          <div class="collection-stat">
+            <strong>77</strong>
+            <span>Products</span>
+          </div>
+          <div class="collection-hero-note">
+            <p>
+              Scroll for a seamless shopping experience. The page moves with
+              quiet motion and generous spacing.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="collection-controls container">
+        <div
+          class="category-nav"
+          role="navigation"
+          aria-label="Collection categories"
+        >
+          <a class="category-pill active" href="#">All</a>
+          <a class="category-pill" href="#">Living</a>
+          <a class="category-pill" href="#">Dining</a>
+          <a class="category-pill" href="#">Bedroom</a>
+          <a class="category-pill" href="#">Office</a>
+          <a class="category-pill" href="#">Accent</a>
+          <a class="category-pill" href="#">Lounge</a>
+          <a class="category-pill" href="#">Lighting</a>
+          <a class="category-pill" href="#">Storage</a>
+          <a class="category-pill" href="#">Seating</a>
+          <a class="category-pill" href="#">Decor</a>
+        </div>
+
+        <div class="filter-sort-row">
+          <div class="filter-group">
+            <label for="availability">Availability</label>
+            <select id="availability">
+              <option>In stock</option>
+              <option>Pre-order</option>
+              <option>Coming soon</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label for="sort">Sort by</label>
+            <select id="sort">
+              <option>Featured</option>
+              <option>Price: low to high</option>
+              <option>Price: high to low</option>
+              <option>Newest</option>
+            </select>
+          </div>
+          <div class="search-group">
+            <label class="sr-only" for="collection-search"
+              >Search products</label
+            >
+            <input
+              id="collection-search"
+              type="search"
+              placeholder="Search furniture"
+              aria-label="Search products"
+            />
+          </div>
+          <button class="clear-filters" type="button">Clear filters</button>
+        </div>
+      </section>
+
+      <section class="product-grid-section container">
+        <div class="product-grid">
+          <article class="product-card reveal-on-scroll">
+            <div class="product-card-image">
+              <img
+                src="IMAGES/lounge oak chair.jpg"
+                alt="Oak lounge chair"
+                loading="lazy"
+              />
+              <div class="quick-actions">
+
+                <button
+                  class="wishlist"
+                  aria-label="Add Oak lounge chair to wishlist"
+                >
+                  ♡
+                </button>
+              </div>
+            </div>
+            <div class="product-card-meta">
+              <p class="collection">Seating</p>
+              <h3 class="title">Oak Lounge Chair</h3>
+              <p class="card-description">
+                Soft linen upholstery and a sculpted oak frame for modern
+                comfort.
+              </p>
+              <div class="product-bottom">
+                <p class="price">₦350,000</p>
+                <button
+                  type="button"
+                  class="btn btn-primary js-add-to-cart"
+                  data-id="oak-lounge-chair"
+                  data-title="Oak Lounge Chair"
+                  data-price="350000"
+                  data-image="IMAGES/lounge oak chair.jpg"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </article>
+ <article class="product-card reveal-on-scroll">
+            <div class="product-card-image">
+              <img
+                src="IMAGES/Nini Office Chair.jpg"
+                alt="Nini Office Chair"
+                loading="lazy"
+              />
+              <div class="quick-actions">
+
+                <button
+                  class="wishlist"
+                  aria-label="Add Nini Office Chair to wishlist"
+                >
+                  ♡
+                </button>
+              </div>
+            </div>
+            <div class="product-card-meta">
+              <p class="collection">Seating</p>
+              <h3 class="title">Nini Office Chair</h3>
+              <p class="card-description">
+                Soft linen upholstery and a sculpted oak frame for modern
+                comfort.
+              </p>
+              <div class="product-bottom">
+                <p class="price">₦350,000</p>
+                <button
+                  type="button"
+                  class="btn btn-primary js-add-to-cart"
+                  data-id="nini-office-chair"
+                  data-title="Nini Office Chair"
+                  data-price="350000"
+                  data-image="IMAGES/Nini Office Chair.jpg"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </article>
+          <article class="product-card reveal-on-scroll">
+            <div class="product-card-image">
+              <img
+                src="IMAGES/COFFEE TABLE.jpg"
+                alt="Oak coffee table"
+                loading="lazy"
+              />
+              <div class="quick-actions">
+
+                <button
+                  class="wishlist"
+                  aria-label="Add Oak coffee table to wishlist"
+                >
+                  ♡
+                </button>
+              </div>
+            </div>
+            <div class="product-card-meta">
+              <p class="collection">Living</p>
+              <h3 class="title">Ivy Coffee Table</h3>
+              <p class="card-description">
+                A low-profile centerpiece with rounded edges and rich oak
+                finish.
+              </p>
+              <div class="product-bottom">
+                <p class="price">₦125,000</p>
+                <button
+                  type="button"
+                  class="btn btn-primary js-add-to-cart"
+                  data-id="ivy-coffee-table"
+                  data-title="Ivy Coffee Table"
+                  data-price="125000"
+                  data-image="IMAGES/COFFEE TABLE.jpg"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </article>
+          <article class="product-card reveal-on-scroll">
+            <div class="product-card-image">
+              <img
+                src="IMAGES/Oak Table.jpg"
+                alt="Oak table"
+                loading="lazy"
+              />
+              <div class="quick-actions">
+
+                <button
+                  class="wishlist"
+                  aria-label="Add Oak table to wishlist"
+                >
+                  ♡
+                </button>
+              </div>
+            </div>
+            <div class="product-card-meta">
+              <p class="collection">Living</p>
+              <h3 class="title">Oak Table</h3>
+              <p class="card-description">
+                A low-profile centerpiece with rounded edges and rich oak
+                finish.
+              </p>
+              <div class="product-bottom">
+                <p class="price">₦125,000</p>
+                <button
+                  type="button"
+                  class="btn btn-primary js-add-to-cart"
+                  data-id="oak-table"
+                  data-title="Oak Table"
+                  data-price="125000"
+                  data-image="IMAGES/Oak Table.jpg"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card reveal-on-scroll">
+            <div class="product-card-image">
+              <img
+                src="IMAGES/Roxy Dining Set.jpg"
+                alt="Roxy dining set"
+                loading="lazy"
+              />
+              <div class="quick-actions">
+
+                <button
+                  class="wishlist"
+                  aria-label="Add Roxy dining set to wishlist"
+                >
+                  ♡
+                </button>
+              </div>
+            </div>
+            <div class="product-card-meta">
+              <p class="collection">Dining</p>
+              <h3 class="title">Roxy Dining Set</h3>
+              <p class="card-description">
+                A refined dining set with elegant proportions and comfortable
+                seating, designed for stylish everyday dining.
+              </p>
+              <div class="product-bottom">
+                <p class="price">₦1,850,000</p>
+                <button
+                  type="button"
+                  class="btn btn-primary js-add-to-cart"
+                  data-id="roxy-dining-set"
+                  data-title="Roxy Dining Set"
+                  data-price="850000"
+                  data-image="IMAGES/Roxy Dining Set.jpg"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card reveal-on-scroll">
+            <div class="product-card-image">
+              <img
+                src="IMAGES/bedframe.jpg"
+                alt="Oak bed frame"
+                loading="lazy"
+              />
+              <div class="quick-actions">
+
+                <button
+                  class="wishlist"
+                  aria-label="Add Min bed frame to wishlist"
+                >
+                  ♡
+                </button>
+              </div>
+            </div>
+            <div class="product-card-meta">
+              <p class="collection">Bedroom</p>
+              <h3 class="title">Min Bed Frame</h3>
+              <p class="card-description">
+                Minimal profile with a solid oak headboard and tailored support.
+              </p>
+              <div class="product-bottom">
+                <p class="price">₦1,899,000</p>
+                <button
+                  type="button"
+                  class="btn btn-primary js-add-to-cart"
+                  data-id="min-bed-frame"
+                  data-title="Min Bed Frame"
+                  data-price="1899000"
+                  data-image="IMAGES/bedframe.jpg"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card reveal-on-scroll">
+            <div class="product-card-image">
+              <img
+                src="IMAGES/accent table.jpg"
+                alt="Accent table"
+                loading="lazy"
+              />
+              <div class="quick-actions">
+
+                <button
+                  class="wishlist"
+                  aria-label="Add accent table to wishlist"
+                >
+                  ♡
+                </button>
+              </div>
+            </div>
+            <div class="product-card-meta">
+              <p class="collection">Accent</p>
+              <h3 class="title">Accent Table</h3>
+              <p class="card-description">
+                A sculptural side table with a tactile finish and modern
+                balance.
+              </p>
+              <div class="product-bottom">
+                <p class="price">₦349,000</p>
+                <button
+                  type="button"
+                  class="btn btn-primary js-add-to-cart"
+                  data-id="accent-table"
+                  data-title="Accent Table"
+                  data-price="349000"
+                  data-image="IMAGES/accent table.jpg"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card reveal-on-scroll">
+            <div class="product-card-image">
+              <img
+                src="IMAGES/Xena Couch.jpg"
+                alt="Xena Couch"
+                loading="lazy"
+              />
+              <div class="quick-actions">
+
+                <button
+                  class="wishlist"
+                  aria-label="Add lounge chair to wishlist"
+                >
+                  ♡
+                </button>
+              </div>
+            </div>
+            <div class="product-card-meta">
+              <p class="collection">Living</p>
+              <h3 class="title">Xena Couch</h3>
+              <p class="card-description">
+                A softly inviting silhouette with premium upholstery and curved
+                structure.
+              </p>
+              <div class="product-bottom">
+                <p class="price">₦699,000</p>
+                <button
+                  type="button"
+                  class="btn btn-primary js-add-to-cart"
+                  data-id="xena-couch"
+                  data-title="Xena Couch"
+                  data-price="699000"
+                  data-image="IMAGES/Xena Couch.jpg"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card reveal-on-scroll">
+            <div class="product-card-image">
+              <img
+                src="IMAGES/Thaila Shelf.jpg"
+                alt="Thaila Shelf"
+                loading="lazy"
+              />
+              <div class="quick-actions">
+
+                <button
+                  class="wishlist"
+                  aria-label="Add Thaila Shelf to wishlist"
+                >
+                  ♡
+                </button>
+              </div>
+            </div>
+            <div class="product-card-meta">
+              <p class="collection">Storage</p>
+              <h3 class="title">Thaila Shelf</h3>
+              <p class="card-description">
+                Open storage with warm wood tones and modular styling options.
+              </p>
+              <div class="product-bottom">
+                <p class="price">₦899,000</p>
+                <button
+                  type="button"
+                  class="btn btn-primary js-add-to-cart"
+                  data-id="thaila-shelf"
+                  data-title="Thaila Shelf"
+                  data-price="899000"
+                  data-image="IMAGES/Thaila Shelf.jpg"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card reveal-on-scroll">
+            <div class="product-card-image">
+              <img src="IMAGES/office 1.jpg" alt="Oak desk" loading="lazy" />
+              <div class="quick-actions">
+
+                <button
+                  class="wishlist"
+                  aria-label="Add Asher desk to wishlist"
+                >
+                  ♡
+                </button>
+              </div>
+            </div>
+            <div class="product-card-meta">
+              <p class="collection">Office</p>
+              <h3 class="title">Asher Desk</h3>
+              <p class="card-description">
+                A refined oak desk with clean lines and integrated cable
+                management for a calm workspace.
+              </p>
+              <div class="product-bottom">
+                <p class="price">₦1,150,000</p>
+                <button
+                  type="button"
+                  class="btn btn-primary js-add-to-cart"
+                  data-id="asher-desk"
+                  data-title="Asher Desk"
+                  data-price="1150000"
+                  data-image="IMAGES/office 1.jpg"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card reveal-on-scroll">
+            <div class="product-card-image">
+              <img
+                src="IMAGES/office 2.jpg"
+                alt="Workspace credenza"
+                loading="lazy"
+              />
+              <div class="quick-actions">
+
+                <button
+                  class="wishlist"
+                  aria-label="Add Moss credenza to wishlist"
+                >
+                  ♡
+                </button>
+              </div>
+            </div>
+            <div class="product-card-meta">
+              <p class="collection">Office</p>
+              <h3 class="title">Moss Credenza</h3>
+              <p class="card-description">
+                A low-profile storage piece in ash with rounded detail and soft
+                matte hardware.
+              </p>
+              <div class="product-bottom">
+                <p class="price">₦999,000</p>
+                <button
+                  type="button"
+                  class="btn btn-primary js-add-to-cart"
+                  data-id="moss-credenza"
+                  data-title="Moss Credenza"
+                  data-price="999000"
+                  data-image="IMAGES/office 2.jpg"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card reveal-on-scroll">
+            <div class="product-card-image">
+              <img src="IMAGES/daybed.jpg" alt="Daybed" loading="lazy" />
+              <div class="quick-actions">
+
+                <button
+                  class="wishlist"
+                  aria-label="Add Linen daybed to wishlist"
+                >
+                  ♡
+                </button>
+              </div>
+            </div>
+            <div class="product-card-meta">
+              <p class="collection">Lounge</p>
+              <h3 class="title">Linen Daybed</h3>
+              <p class="card-description">
+                Relaxed seating with luxury upholstery and a streamlined oak
+                frame for casual layering.
+              </p>
+              <div class="product-bottom">
+                <p class="price">₦1,450,000</p>
+                <button
+                  type="button"
+                  class="btn btn-primary js-add-to-cart"
+                  data-id="linen-daybed"
+                  data-title="Linen Daybed"
+                  data-price="1450000"
+                  data-image="IMAGES/daybed.jpg"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card reveal-on-scroll">
+            <div class="product-card-image">
+              <img src="IMAGES/office 4.jpg" alt="Draft table" loading="lazy" />
+              <div class="quick-actions">
+
+                <button
+                  class="wishlist"
+                  aria-label="Add Walnut draft table to wishlist"
+                >
+                  ♡
+                </button>
+              </div>
+            </div>
+            <div class="product-card-meta">
+              <p class="collection">Office</p>
+              <h3 class="title">Walnut Draft Table</h3>
+              <p class="card-description">
+                A versatile work table with elegant proportions and a rich
+                walnut finish.
+              </p>
+              <div class="product-bottom">
+                <p class="price">₦1,299,000</p>
+                <button
+                  type="button"
+                  class="btn btn-primary js-add-to-cart"
+                  data-id="walnut-draft-table"
+                  data-title="Walnut Draft Table"
+                  data-price="1299000"
+                  data-image="IMAGES/office 4.jpg"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card reveal-on-scroll">
+            <div class="product-card-image">
+              <img
+                src="IMAGES/office 5.jpg"
+                alt="Organizer cabinet"
+                loading="lazy"
+              />
+              <div class="quick-actions">
+
+                <button
+                  class="wishlist"
+                  aria-label="Add Studio organizer to wishlist"
+                >
+                  ♡
+                </button>
+              </div>
+            </div>
+            <div class="product-card-meta">
+              <p class="collection">Office</p>
+              <h3 class="title">Studio Organizer</h3>
+              <p class="card-description">
+                Open shelving and drawer storage in a compact profile for neat,
+                visible organization.
+              </p>
+              <div class="product-bottom">
+                <p class="price">₦780,000</p>
+                <button
+                  type="button"
+                  class="btn btn-primary js-add-to-cart"
+                  data-id="studio-organizer"
+                  data-title="Studio Organizer"
+                  data-price="780000"
+                  data-image="IMAGES/office 5.jpg"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card reveal-on-scroll">
+            <div class="product-card-image">
+              <img src="IMAGES/sideboard.jpg" alt="Sideboard" loading="lazy" />
+              <div class="quick-actions">
+
+                <button
+                  class="wishlist"
+                  aria-label="Add Field sideboard to wishlist"
+                >
+                  ♡
+                </button>
+              </div>
+            </div>
+            <div class="product-card-meta">
+              <p class="collection">Dining</p>
+              <h3 class="title">Field Sideboard</h3>
+              <p class="card-description">
+                A generous dining sideboard in warm wood, made for display and
+                smooth surface styling.
+              </p>
+              <div class="product-bottom">
+                <p class="price">₦1,650,000</p>
+                <button
+                  type="button"
+                  class="btn btn-primary js-add-to-cart"
+                  data-id="field-sideboard"
+                  data-title="Field Sideboard"
+                  data-price="1650000"
+                  data-image="IMAGES/sideboard.jpg"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card reveal-on-scroll">
+            <div class="product-card-image">
+              <img
+                src="IMAGES/bed side table.jpg"
+                alt="Willow side table"
+                loading="lazy"
+              />
+              <div class="quick-actions">
+
+                <button
+                  class="wishlist"
+                  aria-label="Add Willow side table to wishlist"
+                >
+                  ♡
+                </button>
+              </div>
+            </div>
+            <div class="product-card-meta">
+              <p class="collection">Living</p>
+              <h3 class="title">Willow Side Table</h3>
+              <p class="card-description">
+                A curved side table with a marble-inspired top and soft oak legs
+                for layered living spaces.
+              </p>
+              <div class="product-bottom">
+                <p class="price">₦215,000</p>
+                <button
+                  type="button"
+                  class="btn btn-primary js-add-to-cart"
+                  data-id="willow-side-table"
+                  data-title="Willow Side Table"
+                  data-price="215000"
+                  data-image="IMAGES/bed side table.jpg"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </article>
+          <article class="product-card reveal-on-scroll">
+            <div class="product-card-image">
+              <img
+                src="IMAGES/Willow Dining Bench.jpg"
+                alt="Willow dining bench"
+                loading="lazy"
+              />
+              <div class="quick-actions">
+
+                <button
+                  class="wishlist"
+                  aria-label="Add Willow dining bench to wishlist"
+                >
+                  ♡
+                </button>
+              </div>
+            </div>
+            <div class="product-card-meta">
+              <p class="collection">Dining</p>
+              <h3 class="title">Willow Dining Bench</h3>
+              <p class="card-description">
+                Comfortable seating for dining tables with a softly rounded seat
+                and oak base.
+              </p>
+              <div class="product-bottom">
+                <p class="price">₦265,000</p>
+                <button
+                  type="button"
+                  class="btn btn-primary js-add-to-cart"
+                  data-id="willow-dining-bench"
+                  data-title="Willow Dining Bench"
+                  data-price="265000"
+                  data-image="IMAGES/Willow Dining Bench.jpg"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card reveal-on-scroll">
+            <div class="product-card-image">
+              <img
+                src="IMAGES/bed stand.jpg"
+                alt="Harper nightstand"
+                loading="lazy"
+              />
+              <div class="quick-actions">
+
+                <button
+                  class="wishlist"
+                  aria-label="Add Harper nightstand to wishlist"
+                >
+                  ♡
+                </button>
+              </div>
+            </div>
+            <div class="product-card-meta">
+              <p class="collection">Bedroom</p>
+              <h3 class="title">Harper Nightstand</h3>
+              <p class="card-description">
+                A slim bedside table with a single drawer and elegant brass
+                details for quiet bedrooms.
+              </p>
+              <div class="product-bottom">
+                <p class="price">₦2,385,000</p>
+                <button
+                  type="button"
+                  class="btn btn-primary js-add-to-cart"
+                  data-id="harper-nightstand"
+                  data-title="Harper Nightstand"
+                  data-price="385000"
+                  data-image="IMAGES/bed stand.jpg"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card reveal-on-scroll">
+            <div class="product-card-image">
+              <img
+                src="IMAGES/office 1.jpg"
+                alt="Elm desk chair"
+                loading="lazy"
+              />
+              <div class="quick-actions">
+
+                <button
+                  class="wishlist"
+                  aria-label="Add Elm desk chair to wishlist"
+                >
+                  ♡
+                </button>
+              </div>
+            </div>
+            <div class="product-card-meta">
+              <p class="collection">Office</p>
+              <h3 class="title">Elm Desk Chair</h3>
+              <p class="card-description">
+                A comfortable workspace chair with wool upholstery and a tactile
+                oak frame.
+              </p>
+              <div class="product-bottom">
+                <p class="price">₦475,000</p>
+                <button
+                  type="button"
+                  class="btn btn-primary js-add-to-cart"
+                  data-id="elm-desk-chair"
+                  data-title="Elm Desk Chair"
+                  data-price="475000"
+                  data-image="IMAGES/office 1.jpg"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card reveal-on-scroll">
+            <div class="product-card-image">
+              <img
+                src="IMAGES/office 4.jpg"
+                alt="Cedar office cabinet"
+                loading="lazy"
+              />
+              <div class="quick-actions">
+
+                <button
+                  class="wishlist"
+                  aria-label="Add Cedar office cabinet to wishlist"
+                >
+                  ♡
+                </button>
+              </div>
+            </div>
+            <div class="product-card-meta">
+              <p class="collection">Office</p>
+              <h3 class="title">Cedar Office Cabinet</h3>
+              <p class="card-description">
+                A refined storage cabinet with soft-close doors and a linear oak
+                finish for neat desks.
+              </p>
+              <div class="product-bottom">
+                <p class="price">₦1,050,000</p>
+                <button
+                  type="button"
+                  class="btn btn-primary js-add-to-cart"
+                  data-id="cedar-office-cabinet"
+                  data-title="Cedar Office Cabinet"
+                  data-price="1050000"
+                  data-image="IMAGES/office 4.jpg"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card reveal-on-scroll">
+            <div class="product-card-image">
+              <img
+                src="IMAGES/console.jpg"
+                alt="Cedar media console"
+                loading="lazy"
+              />
+              <div class="quick-actions">
+
+                <button
+                  class="wishlist"
+                  aria-label="Add Cedar media console to wishlist"
+                >
+                  ♡
+                </button>
+              </div>
+            </div>
+            <div class="product-card-meta">
+              <p class="collection">Living</p>
+              <h3 class="title">Cedar Media Console</h3>
+              <p class="card-description">
+                A low-profile media console with open shelving and a textured
+                ash front.
+              </p>
+              <div class="product-bottom">
+                <p class="price">$1,180,000</p>
+                <button
+                  type="button"
+                  class="btn btn-primary js-add-to-cart"
+                  data-id="cedar-media-console"
+                  data-title="Cedar Media Console"
+                  data-price="1180000"
+                  data-image="IMAGES/console.jpg"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card reveal-on-scroll">
+            <div class="product-card-image">
+              <img src="IMAGES/bench.jpg" alt="Sierra bench" loading="lazy" />
+              <div class="quick-actions">
+
+                <button
+                  class="wishlist"
+                  aria-label="Add Sierra bench to wishlist"
+                >
+                  ♡
+                </button>
+              </div>
+            </div>
+            <div class="product-card-meta">
+              <p class="collection">Seating</p>
+              <h3 class="title">Sierra Bench</h3>
+              <p class="card-description">
+                A rounded upholstered bench with oak legs and a soft, tailored
+                finish for entryways and seating nooks.
+              </p>
+              <div class="product-bottom">
+                <p class="price">$425,000</p>
+                <button
+                  type="button"
+                  class="btn btn-primary js-add-to-cart"
+                  data-id="sierra-bench"
+                  data-title="Sierra Bench"
+                  data-price="425000"
+                  data-image="IMAGES/bench.jpg"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card reveal-on-scroll">
+            <div class="product-card-image">
+              <img
+                src="IMAGES/black console.jpg"
+                alt="Black console"
+                loading="lazy"
+              />
+              <div class="quick-actions">
+
+                <button
+                  class="wishlist"
+                  aria-label="Add Black Console to wishlist"
+                >
+                  ♡
+                </button>
+              </div>
+            </div>
+            <div class="product-card-meta">
+              <p class="collection">Living</p>
+              <h3 class="title">Black Console</h3>
+              <p class="card-description">
+                A dramatic console table with a matte black finish and refined
+                hardware for moody interiors.
+              </p>
+              <div class="product-bottom">
+                <p class="price">₦1,280,000</p>
+                <button
+                  type="button"
+                  class="btn btn-primary js-add-to-cart"
+                  data-id="black-console"
+                  data-title="Black Console"
+                  data-price="1280000"
+                  data-image="IMAGES/black console.jpg"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card reveal-on-scroll">
+            <div class="product-card-image">
+              <img
+                src="IMAGES/Hazel Couch.jpg"
+                alt="Hazel couch"
+                loading="lazy"
+              />
+              <div class="quick-actions">
+
+                <button
+                  class="wishlist"
+                  aria-label="Add Hazel couch to wishlist"
+                >
+                  ♡
+                </button>
+              </div>
+            </div>
+            <div class="product-card-meta">
+              <p class="collection">Living</p>
+              <h3 class="title">Hazel Couch</h3>
+              <p class="card-description">
+                A plush and sophisticated couch with a warm, inviting character,
+                crafted to create a comfortable and refined living space.
+              </p>
+              <div class="product-bottom">
+                <p class="price">₦1,350,000</p>
+                <button
+                  type="button"
+                  class="btn btn-primary js-add-to-cart"
+                  data-id="hazel-couch"
+                  data-title="Hazel Couch"
+                  data-price="1350000"
+                  data-image="IMAGES/Hazel Couch.jpg"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card reveal-on-scroll">
+            <div class="product-card-image">
+              <img src="IMAGES/Ivy Couch.jpg" alt="Ivy couch" loading="lazy" />
+              <div class="quick-actions">
+
+                <button class="wishlist" aria-label="Add Ivy couch to wishlist">
+                  ♡
+                </button>
+              </div>
+            </div>
+            <div class="product-card-meta">
+              <p class="collection">Living</p>
+              <h3 class="title">Ivy Couch</h3>
+              <p class="card-description">
+                A beautifully tailored couch with a graceful silhouette and
+                inviting comfort, designed to bring warmth and effortless
+                elegance to your living space.
+              </p>
+              <div class="product-bottom">
+                <p class="price">₦1,150,000</p>
+                <button
+                  type="button"
+                  class="btn btn-primary js-add-to-cart"
+                  data-id="ivy-couch"
+                  data-title="Ivy Couch"
+                  data-price="1150000"
+                  data-image="IMAGES/Ivy Couch.jpg"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card reveal-on-scroll">
+            <div class="product-card-image">
+              <img
+                src="IMAGES/Side Table Twister.jpg"
+                alt="Side table twister"
+                loading="lazy"
+              />
+              <div class="quick-actions">
+
+                <button
+                  class="wishlist"
+                  aria-label="Add Side Table Twister to wishlist"
+                >
+                  ♡
+                </button>
+              </div>
+            </div>
+            <div class="product-card-meta">
+              <p class="collection">Accent</p>
+              <h3 class="title">Side Table Twister</h3>
+              <p class="card-description">
+                An accent table with a twisted pedestal base, perfect for soft
+                statement styling.
+              </p>
+              <div class="product-bottom">
+                <p class="price">₦295,000</p>
+                <button
+                  type="button"
+                  class="btn btn-primary js-add-to-cart"
+                  data-id="side-table-twister"
+                  data-title="Side Table Twister"
+                  data-price="295000"
+                  data-image="IMAGES/Side Table Twister.jpg"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card reveal-on-scroll">
+            <div class="product-card-image">
+              <img
+                src="IMAGES/bed frame.jpg"
+                alt="Aster bed frame"
+                loading="lazy"
+              />
+              <div class="quick-actions">
+
+                <button
+                  class="wishlist"
+                  aria-label="Add Aster Bed Frame to wishlist"
+                >
+                  ♡
+                </button>
+              </div>
+            </div>
+            <div class="product-card-meta">
+              <p class="collection">Bedroom</p>
+              <h3 class="title">Aster Bed Frame</h3>
+              <p class="card-description">
+                A streamlined oak bed frame with a low profile and soft, modern
+                detailing.
+              </p>
+              <div class="product-bottom">
+                <p class="price">₦1,320,000</p>
+                <button
+                  type="button"
+                  class="btn btn-primary js-add-to-cart"
+                  data-id="aster-bed-frame"
+                  data-title="Aster Bed Frame"
+                  data-price="1320000"
+                  data-image="IMAGES/bed frame.jpg"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card reveal-on-scroll">
+            <div class="product-card-image">
+              <img src="IMAGES/fur chair.jpg" alt="Fur chair" loading="lazy" />
+              <div class="quick-actions">
+
+                <button class="wishlist" aria-label="Add Fur Chair to wishlist">
+                  ♡
+                </button>
+              </div>
+            </div>
+            <div class="product-card-meta">
+              <p class="collection">Seating</p>
+              <h3 class="title">Fur Chair</h3>
+              <p class="card-description">
+                A tactile accent chair with plush fur upholstery for sculptural
+                style and comfort.
+              </p>
+              <div class="product-bottom">
+                <p class="price">₦325,000</p>
+                <button
+                  type="button"
+                  class="btn btn-primary js-add-to-cart"
+                  data-id="fur-chair"
+                  data-title="Fur Chair"
+                  data-price="325000"
+                  data-image="IMAGES/fur chair.jpg"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </article>
+
+         <article class="product-card reveal-on-scroll">
+            <div class="product-card-image">
+              <img src="IMAGES/Seraphina Chair.jpg" alt="Seraphina Chair" loading="lazy" />
+              <div class="quick-actions">
+
+                <button class="wishlist" aria-label="Add Seraphina Chair to wishlist">
+                  ♡
+                </button>
+              </div>
+            </div>
+            <div class="product-card-meta">
+              <p class="collection">Seating</p>
+              <h3 class="title">Seraphina Chair</h3>
+              <p class="card-description">
+                A tactile accent chair with plush fur upholstery for sculptural
+                style and comfort.
+              </p>
+              <div class="product-bottom">
+                <p class="price">₦325,000</p>
+                <button
+                  type="button"
+                  class="btn btn-primary js-add-to-cart"
+                  data-id="seraphina-chair"
+                  data-title="Seraphina Chair"
+                  data-price="325000"
+                  data-image="IMAGES/Seraphina Chair.jpg"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </article>
+          
+         <article class="product-card reveal-on-scroll">
+            <div class="product-card-image">
+              <img src="IMAGES/Ribbon Chair.jpg" alt="Ribbon Chair" loading="lazy" />
+              <div class="quick-actions">
+
+                <button class="wishlist" aria-label="Add Ribbon Chair to wishlist">
+                  ♡
+                </button>
+              </div>
+            </div>
+            <div class="product-card-meta">
+              <p class="collection">Seating</p>
+              <h3 class="title">Ribbon Chair</h3>
+              <p class="card-description">
+                A tactile accent chair with plush fur upholstery for sculptural
+                style and comfort.
+              </p>
+              <div class="product-bottom">
+                <p class="price">₦325,000</p>
+                <button
+                  type="button"
+                  class="btn btn-primary js-add-to-cart"
+                  data-id="ribbon-chair"
+                  data-title="Ribbon Chair"
+                  data-price="325000"
+                  data-image="IMAGES/Ribbon Chair.jpg"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </article>
+          <article class="product-card reveal-on-scroll">
+            <div class="product-card-image">
+              <img
+                src="IMAGES/table lamp.jpg"
+                alt="Nova table lamp"
+                loading="lazy"
+              />
+              <div class="quick-actions">
+
+                <button
+                  class="wishlist"
+                  aria-label="Add Nova Table Lamp to wishlist"
+                >
+                  ♡
+                </button>
+              </div>
+            </div>
+            <div class="product-card-meta">
+              <p class="collection">Lighting</p>
+              <h3 class="title">Nova Table Lamp</h3>
+              <p class="card-description">
+                A crisp table lamp with a sculpted base and soft ambient glow
+                for bedside or console styling.
+              </p>
+              <div class="product-bottom">
+                <p class="price">₦175,000</p>
+                <button
+                  type="button"
+                  class="btn btn-primary js-add-to-cart"
+                  data-id="nova-table-lamp"
+                  data-title="Nova Table Lamp"
+                  data-price="175000"
+                  data-image="IMAGES/table lamp.jpg"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card reveal-on-scroll">
+            <div class="product-card-image">
+              <img
+                src="IMAGES/Min wooden wardrobe.jpg"
+                alt="Maison wardrobe"
+                loading="lazy"
+              />
+              <div class="quick-actions">
+
+                <button
+                  class="wishlist"
+                  aria-label="Add Maison Wardrobe to wishlist"
+                >
+                  ♡
+                </button>
+              </div>
+            </div>
+            <div class="product-card-meta">
+              <p class="collection">Bedroom</p>
+              <h3 class="title">Maison Wardrobe</h3>
+              <p class="card-description">
+                A premium wardrobe with a polished oak aesthetic and spacious
+                storage layout.
+              </p>
+              <div class="product-bottom">
+                <p class="price">₦3,250,000</p>
+                <button
+                  type="button"
+                  class="btn btn-primary js-add-to-cart"
+                  data-id="maison-wardrobe"
+                  data-title="Maison Wardrobe"
+                  data-price="3250000"
+                  data-image="IMAGES/Min wooden wardrobe.jpg"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </article>
+
+            <article class="product-card reveal-on-scroll">
+            <div class="product-card-image">
+              <img
+                src="IMAGES/Tulip Mirror Wardrobe.jpg"
+                alt="Tulip Mirror Wardrobe"
+                loading="lazy"
+              />
+              <div class="quick-actions">
+
+                <button
+                  class="wishlist"
+                  aria-label="Add Tulip Mirror Wardrobe to wishlist"
+                >
+                  ♡
+                </button>
+              </div>
+            </div>
+            <div class="product-card-meta">
+              <p class="collection">Bedroom</p>
+              <h3 class="title">Tulip Mirror Wardrobe</h3>
+              <p class="card-description">
+                A premium wardrobe with a polished oak aesthetic and spacious
+                storage layout.
+              </p>
+              <div class="product-bottom">
+                <p class="price">₦1,250,000</p>
+                <button
+                  type="button"
+                  class="btn btn-primary js-add-to-cart"
+                  data-id="tulip-mirror-wardrobe"
+                  data-title="Tulip Mirror Wardrobe"
+                  data-price="1250000"
+                  data-image="IMAGES/Tulip Mirror Wardrobe.jpg"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card reveal-on-scroll">
+            <div class="product-card-image">
+              <img
+                src="IMAGES/Min wardrobe.jpg"
+                alt="Min wardrobe"
+                loading="lazy"
+              />
+              <div class="quick-actions">
+
+                <button
+                  class="wishlist"
+                  aria-label="Add Min Wardrobe to wishlist"
+                >
+                  ♡
+                </button>
+              </div>
+            </div>
+            <div class="product-card-meta">
+              <p class="collection">Storage</p>
+              <h3 class="title">Min Wardrobe</h3>
+              <p class="card-description">
+                A warm wardrobe with clean lines and generous shelving for
+                practical storage.
+              </p>
+              <div class="product-bottom">
+                <p class="price">₦1,550,000</p>
+                <button
+                  type="button"
+                  class="btn btn-primary js-add-to-cart"
+                  data-id="min-wardrobe"
+                  data-title="Min Wardrobe"
+                  data-price="1550000"
+                  data-image="IMAGES/Min wardrobe.jpg"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card reveal-on-scroll">
+            <div class="product-card-image">
+              <img
+                src="IMAGES/Ivy Acrylic Mirror.jpg"
+                alt="Ivy Acrylic mirror"
+                loading="lazy"
+              />
+              <div class="quick-actions">
+
+                <button
+                  class="wishlist"
+                  aria-label="Add Ivy Acrylic Mirror to wishlist"
+                >
+                  ♡
+                </button>
+              </div>
+            </div>
+            <div class="product-card-meta">
+              <p class="collection">Decor</p>
+              <h3 class="title">Ivy Acrylic Mirror</h3>
+              <p class="card-description">
+                A sleek acrylic mirror with a modern silhouette, designed to add
+                brightness and contemporary elegance to your space.
+              </p>
+              <div class="product-bottom">
+                <p class="price">₦225,000</p>
+                <button
+                  type="button"
+                  class="btn btn-primary js-add-to-cart"
+                  data-id="ivy-acrylic-mirror"
+                  data-title="Ivy Acrylic Mirror"
+                  data-price="225000"
+                  data-image="IMAGES/Ivy Acrylic Mirror.jpg"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card reveal-on-scroll">
+            <div class="product-card-image">
+              <img
+                src="IMAGES/Brown Mirror.jpg"
+                alt="Brown mirror"
+                loading="lazy"
+              />
+              <div class="quick-actions">
+
+                <button
+                  class="wishlist"
+                  aria-label="Add Brown Mirror to wishlist"
+                >
+                  ♡
+                </button>
+              </div>
+            </div>
+            <div class="product-card-meta">
+              <p class="collection">Decor</p>
+              <h3 class="title">Brown Mirror</h3>
+              <p class="card-description">
+                A warm-toned mirror with a rich, understated finish, designed to
+                complement natural textures and create a welcoming atmosphere.
+              </p>
+              <div class="product-bottom">
+                <p class="price">₦195,000</p>
+                <button
+                  type="button"
+                  class="btn btn-primary js-add-to-cart"
+                  data-id="brown-mirror"
+                  data-title="Brown Mirror"
+                  data-price="195000"
+                  data-image="IMAGES/Brown Mirror.jpg"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card reveal-on-scroll">
+            <div class="product-card-image">
+              <img
+                src="IMAGES/Hazel Dining Set.jpg"
+                alt="Hazel dining set"
+                loading="lazy"
+              />
+              <div class="quick-actions">
+
+                <button
+                  class="wishlist"
+                  aria-label="Add Hazel dining set to wishlist"
+                >
+                  ♡
+                </button>
+              </div>
+            </div>
+            <div class="product-card-meta">
+              <p class="collection">Dining</p>
+              <h3 class="title">Hazel Dining Set</h3>
+              <p class="card-description">
+                A beautifully balanced dining set with a warm, sophisticated
+                character, designed to elevate both everyday meals and special
+                occasions.
+              </p>
+              <div class="product-bottom">
+                <p class="price">₦1,250,000</p>
+                <button
+                  type="button"
+                  class="btn btn-primary js-add-to-cart"
+                  data-id="hazel-dining-set"
+                  data-title="Hazel Dining Set"
+                  data-price="1250000"
+                  data-image="IMAGES/Hazel Dining Set.jpg"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card reveal-on-scroll">
+            <div class="product-card-image">
+              <img
+                src="IMAGES/kitchen pantry cabinet.jpg"
+                alt="Kitchen pantry cabinet"
+                loading="lazy"
+              />
+              <div class="quick-actions">
+
+                <button
+                  class="wishlist"
+                  aria-label="Add Kitchen Pantry Cabinet to wishlist"
+                >
+                  ♡
+                </button>
+              </div>
+            </div>
+            <div class="product-card-meta">
+              <p class="collection">Kitchen</p>
+              <h3 class="title">Kitchen Pantry Cabinet</h3>
+              <p class="card-description">
+                A practical pantry cabinet with closed storage and refined oak
+                tone for kitchens.
+              </p>
+              <div class="product-bottom">
+                <p class="price">₦1,050,000</p>
+                <button
+                  type="button"
+                  class="btn btn-primary js-add-to-cart"
+                  data-id="kitchen-pantry-cabinet"
+                  data-title="Kitchen Pantry Cabinet"
+                  data-price="1050000"
+                  data-image="IMAGES/kitchen pantry cabinet.jpg"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card reveal-on-scroll">
+            <div class="product-card-image">
+              <img
+                src="IMAGES/Nova Pantry.jpg"
+                alt="Nova Pantry"
+                loading="lazy"
+              />
+              <div class="quick-actions">
+
+                <button
+                  class="wishlist"
+                  aria-label="Add Nova Pantry to wishlist"
+                >
+                  ♡
+                </button>
+              </div>
+            </div>
+            <div class="product-card-meta">
+              <p class="collection">Kitchen</p>
+              <h3 class="title">Nova Pantry</h3>
+              <p class="card-description">
+                A smart microwave cabinet with clean storage lines and a sleek
+                surface finish.
+              </p>
+              <div class="product-bottom">
+                <p class="price">₦850,000</p>
+                <button
+                  type="button"
+                  class="btn btn-primary js-add-to-cart"
+                  data-id="nova-pantry"
+                  data-title="Nova Pantry"
+                  data-price="850000"
+                  data-image="IMAGES/Nova Pantry.jpg"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card reveal-on-scroll">
+            <div class="product-card-image">
+              <img
+                src="IMAGES/Royal Couch.jpg"
+                alt="Royal couch"
+                loading="lazy"
+              />
+              <div class="quick-actions">
+
+                <button
+                  class="wishlist"
+                  aria-label="Add Royal couch to wishlist"
+                >
+                  ♡
+                </button>
+              </div>
+            </div>
+            <div class="product-card-meta">
+              <p class="collection">Living</p>
+              <h3 class="title">Royal Couch</h3>
+              <p class="card-description">
+                A luxurious statement couch with a commanding silhouette and
+                plush seating, designed to bring timeless grandeur to
+                sophisticated interiors.
+              </p>
+              <div class="product-bottom">
+                <p class="price">₦1,750,000</p>
+                <button
+                  type="button"
+                  class="btn btn-primary js-add-to-cart"
+                  data-id="royal-couch"
+                  data-title="Royal Couch"
+                  data-price="1750000"
+                  data-image="IMAGES/Royal Couch.jpg"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card reveal-on-scroll">
+            <div class="product-card-image">
+              <img
+                src="IMAGES/Lilo Couch.jpg"
+                alt="Lilo couch"
+                loading="lazy"
+              />
+              <div class="quick-actions">
+
+                <button
+                  class="wishlist"
+                  aria-label="Add Lilo couch to wishlist"
+                >
+                  ♡
+                </button>
+              </div>
+            </div>
+            <div class="product-card-meta">
+              <p class="collection">Living</p>
+              <h3 class="title">Lilo Couch</h3>
+              <p class="card-description">
+                A charming and comfortable couch with a relaxed silhouette,
+                designed to add effortless style and warmth to modern living
+                spaces.
+              </p>
+              <div class="product-bottom">
+                <p class="price">₦1,200,000</p>
+                <button
+                  type="button"
+                  class="btn btn-primary js-add-to-cart"
+                  data-id="lilo-couch"
+                  data-title="Lilo Couch"
+                  data-price="1200000"
+                  data-image="IMAGES/Lilo Couch.jpg"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card reveal-on-scroll">
+            <div class="product-card-image">
+              <img
+                src="IMAGES/Oak Dining Set.jpg"
+                alt="Oak dining set"
+                loading="lazy"
+              />
+              <div class="quick-actions">
+
+                <button
+                  class="wishlist"
+                  aria-label="Add Oak dining set to wishlist"
+                >
+                  ♡
+                </button>
+              </div>
+            </div>
+            <div class="product-card-meta">
+              <p class="collection">Dining</p>
+              <h3 class="title">Oak Dining Set</h3>
+              <p class="card-description">
+                A premium oak dining set celebrating natural craftsmanship,
+                generous proportions, and timeless elegance for sophisticated
+                interiors.
+              </p>
+              <div class="product-bottom">
+                <p class="price">₦1,400,000</p>
+                <button
+                  type="button"
+                  class="btn btn-primary js-add-to-cart"
+                  data-id="oak-dining-set"
+                  data-title="Oak Dining Set"
+                  data-price="1400000"
+                  data-image="IMAGES/Oak Dining Set.jpg"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </article>
+          <article class="product-card reveal-on-scroll">
+            <div class="product-card-image">
+              <img
+                src="IMAGES/White Aquila Wardrobe.jpg"
+                alt="White Aquila Wardrobe"
+                loading="lazy"
+              />
+              <div class="quick-actions">
+
+                <button
+                  class="wishlist"
+                  aria-label="Add White Aquila Wardrobe to wishlist"
+                >
+                  ♡
+                </button>
+              </div>
+            </div>
+            <div class="product-card-meta">
+              <p class="collection">Bedroom</p>
+              <h3 class="title">White Aquila Wardrobe</h3>
+              <p class="card-description">
+                A premium wardrobe with a polished oak aesthetic and spacious
+                storage layout.
+              </p>
+              <div class="product-bottom">
+                <p class="price">₦3,250,000</p>
+                <button
+                  type="button"
+                  class="btn btn-primary js-add-to-cart"
+                  data-id="white-aquila-wardrobe"
+                  data-title="White Aquila Wardrobe"
+                  data-price="3250000"
+                  data-image="IMAGES/White Aquila Wardrobe.jpg"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card reveal-on-scroll">
+            <div class="product-card-image">
+              <img
+                src="IMAGES/Xena Plain Mirror.jpg"
+                alt="Xena Plain Mirror"
+                loading="lazy"
+              />
+              <div class="quick-actions">
+
+                <button
+                  class="wishlist"
+                  aria-label="Add Xena Plain Mirror to wishlist"
+                >
+                  ♡
+                </button>
+              </div>
+            </div>
+            <div class="product-card-meta">
+              <p class="collection">Decor</p>
+              <h3 class="title">Xena Plain Mirror</h3>
+              <p class="card-description">
+                A clean and versatile plain mirror with a minimalist profile,
+                designed to brighten your space while blending effortlessly with
+                any interior.
+              </p>
+              <div class="product-bottom">
+                <p class="price">₦185,000</p>
+                <button
+                  type="button"
+                  class="btn btn-primary js-add-to-cart"
+                  data-id="xena-plain-mirror"
+                  data-title="Xena Plain Mirror"
+                  data-price="185000"
+                  data-image="IMAGES/Xena Plain Mirror.jpg"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card reveal-on-scroll">
+            <div class="product-card-image">
+              <img
+                src="IMAGES/Oliver fixed table.jpg"
+                alt="Oliver fixed table"
+                loading="lazy"
+              />
+              <div class="quick-actions">
+
+                <button
+                  class="wishlist"
+                  aria-label="Add Oliver Fixed Table to wishlist"
+                >
+                  ♡
+                </button>
+              </div>
+            </div>
+            <div class="product-card-meta">
+              <p class="collection">Dining</p>
+              <h3 class="title">Oliver Fixed Table</h3>
+              <p class="card-description">
+                A clean, fixed dining table with warm wooden details and a
+                substantial silhouette.
+              </p>
+              <div class="product-bottom">
+                <p class="price">₦1,420,000</p>
+                <button
+                  type="button"
+                  class="btn btn-primary js-add-to-cart"
+                  data-id="oliver-fixed-table"
+                  data-title="Oliver Fixed Table"
+                  data-price="1420000"
+                  data-image="IMAGES/Oliver fixed table.jpg"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card reveal-on-scroll">
+            <div class="product-card-image">
+              <img
+                src="IMAGES/counter-height stool.jpg"
+                alt="Counter height stool"
+                loading="lazy"
+              />
+              <div class="quick-actions">
+
+                <button
+                  class="wishlist"
+                  aria-label="Add Counter Height Stool to wishlist"
+                >
+                  ♡
+                </button>
+              </div>
+            </div>
+            <div class="product-card-meta">
+              <p class="collection">Dining</p>
+              <h3 class="title">Counter Height Stool</h3>
+              <p class="card-description">
+                A sculpted stool with a minimalist frame ideal for island
+                seating or bar areas.
+              </p>
+              <div class="product-bottom">
+                <p class="price">₦185,000</p>
+                <button
+                  type="button"
+                  class="btn btn-primary js-add-to-cart"
+                  data-id="counter-height-stool"
+                  data-title="Counter Height Stool"
+                  data-price="185000"
+                  data-image="IMAGES/counter-height stool.jpg"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card reveal-on-scroll">
+            <div class="product-card-image">
+              <img
+                src="IMAGES/Chic Amy Dining Set.jpg"
+                alt="Chic Amy dining set"
+                loading="lazy"
+              />
+              <div class="quick-actions">
+
+                <button
+                  class="wishlist"
+                  aria-label="Add Chic Amy dining set to wishlist"
+                >
+                  ♡
+                </button>
+              </div>
+            </div>
+            <div class="product-card-meta">
+              <p class="collection">Dining</p>
+              <h3 class="title">Chic Amy Dining Set</h3>
+              <p class="card-description">
+                A beautifully styled dining set with refined proportions and
+                timeless appeal, designed to bring effortless sophistication to
+                the dining space.
+              </p>
+              <div class="product-bottom">
+                <p class="price">₦1,050,000</p>
+                <button
+                  type="button"
+                  class="btn btn-primary js-add-to-cart"
+                  data-id="chic-amy-dining-set"
+                  data-title="Chic Amy Dining Set"
+                  data-price="1050000"
+                  data-image="IMAGES/Chic Amy Dining Set.jpg"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card reveal-on-scroll">
+            <div class="product-card-image">
+              <img
+                src="IMAGES/Zuri large wardobe.jpg"
+                alt="Zuri large wardrobe"
+                loading="lazy"
+              />
+              <div class="quick-actions">
+
+                <button
+                  class="wishlist"
+                  aria-label="Add Zuri Large Wardrobe to wishlist"
+                >
+                  ♡
+                </button>
+              </div>
+            </div>
+            <div class="product-card-meta">
+              <p class="collection">Bedroom</p>
+              <h3 class="title">Zuri Large Wardrobe</h3>
+              <p class="card-description">
+                A premium wardrobe with a polished oak aesthetic and spacious
+                storage layout.
+              </p>
+              <div class="product-bottom">
+                <p class="price">₦3,250,000</p>
+                <button
+                  type="button"
+                  class="btn btn-primary js-add-to-cart"
+                  data-id="zuri-large-wardobe"
+                  data-title="Zuri Large Wardrobe"
+                  data-price="3250000"
+                  data-image="IMAGES/Zuri large wardobe.jpg"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card reveal-on-scroll">
+            <div class="product-card-image">
+              <img
+                src="IMAGES/Willow oak wardrobe.jpg"
+                alt="Willow oak wardrobe"
+                loading="lazy"
+              />
+              <div class="quick-actions">
+
+                <button
+                  class="wishlist"
+                  aria-label="Add Willow Oak Wardrobe to wishlist"
+                >
+                  ♡
+                </button>
+              </div>
+            </div>
+            <div class="product-card-meta">
+              <p class="collection">Storage</p>
+              <h3 class="title">Willow Oak Wardrobe</h3>
+              <p class="card-description">
+                A warm wooden wardrobe with clean lines and generous shelving
+                for practical storage.
+              </p>
+              <div class="product-bottom">
+                <p class="price">₦1,550,000</p>
+                <button
+                  type="button"
+                  class="btn btn-primary js-add-to-cart"
+                  data-id="willow-oak-wardrobe"
+                  data-title="Willow Oak Wardrobe"
+                  data-price="1550000"
+                  data-image="IMAGES/Willow oak wardrobe.jpg"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card reveal-on-scroll">
+            <div class="product-card-image">
+              <img
+                src="IMAGES/Blossom Mirror.jpg"
+                alt="Blossom mirror"
+                loading="lazy"
+              />
+              <div class="quick-actions">
+
+                <button
+                  class="wishlist"
+                  aria-label="Add Blossom Mirror to wishlist"
+                >
+                  ♡
+                </button>
+              </div>
+            </div>
+            <div class="product-card-meta">
+              <p class="collection">Decor</p>
+              <h3 class="title">Blossom Mirror</h3>
+              <p class="card-description">
+                A delicate decorative mirror inspired by organic forms, bringing
+                softness, character, and light into your interior.
+              </p>
+              <div class="product-bottom">
+                <p class="price">₦235,000</p>
+                <button
+                  type="button"
+                  class="btn btn-primary js-add-to-cart"
+                  data-id="blossom-mirror"
+                  data-title="Blossom Mirror"
+                  data-price="235000"
+                  data-image="IMAGES/Blossom Mirror.jpg"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card reveal-on-scroll">
+            <div class="product-card-image">
+              <img
+                src="IMAGES/Zara Mirror.jpg"
+                alt="Zara mirror"
+                loading="lazy"
+              />
+              <div class="quick-actions">
+
+                <button
+                  class="wishlist"
+                  aria-label="Add Zara Mirror to wishlist"
+                >
+                  ♡
+                </button>
+              </div>
+            </div>
+            <div class="product-card-meta">
+              <p class="collection">Decor</p>
+              <h3 class="title">Zara Mirror</h3>
+              <p class="card-description">
+                A soft framed mirror that adds color and sculptural charm to a
+                dressing space.
+              </p>
+              <div class="product-bottom">
+                <p class="price">₦215,000</p>
+                <button
+                  type="button"
+                  class="btn btn-primary js-add-to-cart"
+                  data-id="zara-mirror"
+                  data-title="Zara Mirror"
+                  data-price="215000"
+                  data-image="IMAGES/Zara Mirror.jpg"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card reveal-on-scroll">
+            <div class="product-card-image">
+              <img
+                src="IMAGES/Lilo Table.jpg"
+                alt="Lilo fixed table"
+                loading="lazy"
+              />
+              <div class="quick-actions">
+
+                <button
+                  class="wishlist"
+                  aria-label="Add Lilo Fixed Table to wishlist"
+                >
+                  ♡
+                </button>
+              </div>
+            </div>
+            <div class="product-card-meta">
+              <p class="collection">Bedroom</p>
+              <h3 class="title">Lilo Table</h3>
+              <p class="card-description">
+                A clean, fixed table with warm wooden details and a substantial
+                silhouette.
+              </p>
+              <div class="product-bottom">
+                <p class="price">₦420,000</p>
+                <button
+                  type="button"
+                  class="btn btn-primary js-add-to-cart"
+                  data-id="lilo-table"
+                  data-title="Lilo Table"
+                  data-price="420000"
+                  data-image="IMAGES/Lilo Table.jpg"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card reveal-on-scroll">
+            <div class="product-card-image">
+              <img
+                src="IMAGES/Bel microwave cabinet.jpg"
+                alt="Microwave cabinet"
+                loading="lazy"
+              />
+              <div class="quick-actions">
+
+                <button
+                  class="wishlist"
+                  aria-label="Add Microwave Cabinet to wishlist"
+                >
+                  ♡
+                </button>
+              </div>
+            </div>
+            <div class="product-card-meta">
+              <p class="collection">Kitchen</p>
+              <h3 class="title">Bel Microwave Cabinet</h3>
+              <p class="card-description">
+                A smart microwave cabinet with clean storage lines and a sleek
+                surface finish.
+              </p>
+              <div class="product-bottom">
+                <p class="price">₦850,000</p>
+                <button
+                  type="button"
+                  class="btn btn-primary js-add-to-cart"
+                  data-id="microwave-cabinet"
+                  data-title="Bel Microwave Cabinet"
+                  data-price="850000"
+                  data-image="IMAGES/Bel microwave cabinet.jpg"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card reveal-on-scroll">
+            <div class="product-card-image">
+              <img src="IMAGES/Amy lamp.jpg" alt="Amy lamp" loading="lazy" />
+              <div class="quick-actions">
+
+                <button class="wishlist" aria-label="Add Amy Lamp to wishlist">
+                  ♡
+                </button>
+              </div>
+            </div>
+            <div class="product-card-meta">
+              <p class="collection">Lighting</p>
+              <h3 class="title">Amy Lamp</h3>
+              <p class="card-description">
+                A timeless lamp with an elegant silhouette that brings a warm,
+                refined glow and effortless character to any room.
+              </p>
+              <div class="product-bottom">
+                <p class="price">₦175,000</p>
+                <button
+                  type="button"
+                  class="btn btn-primary js-add-to-cart"
+                  data-id="amy-lamp"
+                  data-title="Amy Lamp"
+                  data-price="175000"
+                  data-image="IMAGES/Amy lamp.jpg"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card reveal-on-scroll">
+            <div class="product-card-image">
+              <img src="IMAGES/Mai lamp.jpg" alt="Mai lamp" loading="lazy" />
+              <div class="quick-actions">
+
+                <button class="wishlist" aria-label="Add Mai Lamp to wishlist">
+                  ♡
+                </button>
+              </div>
+            </div>
+            <div class="product-card-meta">
+              <p class="collection">Lighting</p>
+              <h3 class="title">Mai Lamp</h3>
+              <p class="card-description">
+                A refined statement lamp with a graceful silhouette, designed to
+                bring warmth and timeless elegance to any space.
+              </p>
+              <div class="product-bottom">
+                <p class="price">₦175,000</p>
+                <button
+                  type="button"
+                  class="btn btn-primary js-add-to-cart"
+                  data-id="mai-lamp"
+                  data-title="Mai Lamp"
+                  data-price="175000"
+                  data-image="IMAGES/Mai lamp.jpg"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card reveal-on-scroll">
+            <div class="product-card-image">
+              <img
+                src="IMAGES/Hibiscus lamp.jpg"
+                alt="Hibiscus lamp"
+                loading="lazy"
+              />
+              <div class="quick-actions">
+
+                <button
+                  class="wishlist"
+                  aria-label="Add Hibiscus Lamp to wishlist"
+                >
+                  ♡
+                </button>
+              </div>
+            </div>
+            <div class="product-card-meta">
+              <p class="collection">Lighting</p>
+              <h3 class="title">Hibiscus Lamp</h3>
+              <p class="card-description">
+                A graceful floral-inspired lamp that brings organic beauty,
+                delicate form, and a soft decorative glow to your space.
+              </p>
+              <div class="product-bottom">
+                <p class="price">₦175,000</p>
+                <button
+                  type="button"
+                  class="btn btn-primary js-add-to-cart"
+                  data-id="hibiscus-lamp"
+                  data-title="Hibiscus Lamp"
+                  data-price="175000"
+                  data-image="IMAGES/Hibiscus lamp.jpg"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </article>
+          <article class="product-card reveal-on-scroll">
+            <div class="product-card-image">
+              <img
+                src="IMAGES/Midnight lamp.jpg"
+                alt="Midnight lamp"
+                loading="lazy"
+              />
+              <div class="quick-actions">
+
+                <button
+                  class="wishlist"
+                  aria-label="Add Midnight Lamp to wishlist"
+                >
+                  ♡
+                </button>
+              </div>
+            </div>
+            <div class="product-card-meta">
+              <p class="collection">Lighting</p>
+              <h3 class="title">Midnight Lamp</h3>
+              <p class="card-description">
+                A sophisticated lamp with a deep, moody character that creates a
+                warm and intimate atmosphere after dark.
+              </p>
+              <div class="product-bottom">
+                <p class="price">₦175,000</p>
+                <button
+                  type="button"
+                  class="btn btn-primary js-add-to-cart"
+                  data-id="midnight-lamp"
+                  data-title="Midnight Lamp"
+                  data-price="175000"
+                  data-image="IMAGES/Midnight lamp.jpg"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </article>
+           <article class="product-card reveal-on-scroll">
+            <div class="product-card-image">
+              <img
+                src="IMAGES/Xena Flower Pot.jpg"
+                alt="Xena Flower Pot"
+                loading="lazy"
+              />
+              <div class="quick-actions">
+
+                <button
+                  class="wishlist"
+                  aria-label="Add Xena Flower Pot to wishlist"
+                >
+                  ♡
+                </button>
+              </div>
+            </div>
+            <div class="product-card-meta">
+              <p class="collection">Decor</p>
+              <h3 class="title">Xena Flower Pot</h3>
+              <p class="card-description">
+                A beautiful flower pot with a modern design, perfect for adding a touch of nature to any room.
+              </p>
+              <div class="product-bottom">
+                <p class="price">₦155,000</p>
+                <button
+                  type="button"
+                  class="btn btn-primary js-add-to-cart"
+                  data-id="xena-flower-pot"
+                  data-title="Xena Flower Pot"
+                  data-price="175000"
+                  data-image="IMAGES/Xena Flower Pot.jpg"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card reveal-on-scroll">
+            <div class="product-card-image">
+              <img src="IMAGES/Lily lamp.jpg" alt="Lily lamp" loading="lazy" />
+              <div class="quick-actions">
+
+                <button class="wishlist" aria-label="Add Lily Lamp to wishlist">
+                  ♡
+                </button>
+              </div>
+            </div>
+            <div class="product-card-meta">
+              <p class="collection">Lighting</p>
+              <h3 class="title">Lily Lamp</h3>
+              <p class="card-description">
+                A delicate floral-inspired lamp with a graceful form that adds
+                soft illumination and natural elegance to any interior.
+              </p>
+              <div class="product-bottom">
+                <p class="price">₦175,000</p>
+                <button
+                  type="button"
+                  class="btn btn-primary js-add-to-cart"
+                  data-id="lily-lamp"
+                  data-title="Lily Lamp"
+                  data-price="175000"
+                  data-image="IMAGES/Lily lamp.jpg"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card reveal-on-scroll">
+            <div class="product-card-image">
+              <img src="IMAGES/red lamp.jpg" alt="Red lamp" loading="lazy" />
+              <div class="quick-actions">
+
+                <button class="wishlist" aria-label="Add Red Lamp to wishlist">
+                  ♡
+                </button>
+              </div>
+            </div>
+            <div class="product-card-meta">
+              <p class="collection">Lighting</p>
+              <h3 class="title">Red Lamp</h3>
+              <p class="card-description">
+                A bold red that brings a pop of color and sculptural energy to
+                ambient lighting.
+              </p>
+              <div class="product-bottom">
+                <p class="price">₦175,000</p>
+                <button
+                  type="button"
+                  class="btn btn-primary js-add-to-cart"
+                  data-id="red-lamp"
+                  data-title="Red Lamp"
+                  data-price="175000"
+                  data-image="IMAGES/red lamp.jpg"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card reveal-on-scroll">
+            <div class="product-card-image">
+              <img
+                src="IMAGES/Peonie lamp.jpg"
+                alt="Peonie lamp"
+                loading="lazy"
+              />
+              <div class="quick-actions">
+
+                <button
+                  class="wishlist"
+                  aria-label="Add Peonie Lamp to wishlist"
+                >
+                  ♡
+                </button>
+              </div>
+            </div>
+            <div class="product-card-meta">
+              <p class="collection">Lighting</p>
+              <h3 class="title">Peonie Lamp</h3>
+              <p class="card-description">
+                A graceful floral-inspired lamp with a soft sculptural form,
+                bringing delicate beauty and a warm, inviting glow to your
+                space.
+              </p>
+              <div class="product-bottom">
+                <p class="price">₦175,000</p>
+                <button
+                  type="button"
+                  class="btn btn-primary js-add-to-cart"
+                  data-id="peonie-lamp"
+                  data-title="Peonie Lamp"
+                  data-price="175000"
+                  data-image="IMAGES/Peonie lamp.jpg"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card reveal-on-scroll">
+            <div class="product-card-image">
+              <img
+                src="IMAGES/Belle Lamp.jpg"
+                alt="Belle table lamp"
+                loading="lazy"
+              />
+              <div class="quick-actions">
+
+                <button
+                  class="wishlist"
+                  aria-label="Add Belle Table Lamp to wishlist"
+                >
+                  ♡
+                </button>
+              </div>
+            </div>
+            <div class="product-card-meta">
+              <p class="collection">Lighting</p>
+              <h3 class="title">Belle Table Lamp</h3>
+              <p class="card-description">
+                A sculptural table lamp with a soft glow, perfect for bedside or
+                sideboard accents.
+              </p>
+              <div class="product-bottom">
+                <p class="price">₦165,000</p>
+                <button
+                  type="button"
+                  class="btn btn-primary js-add-to-cart"
+                  data-id="belle-table-lamp"
+                  data-title="Belle Table Lamp"
+                  data-price="165000"
+                  data-image="IMAGES/Belle Lamp.jpg"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card reveal-on-scroll">
+            <div class="product-card-image">
+              <img
+                src="IMAGES/Jasmine lamp.jpg"
+                alt="Jasmine lamp"
+                loading="lazy"
+              />
+              <div class="quick-actions">
+
+                <button
+                  class="wishlist"
+                  aria-label="Add Jasmine Lamp to wishlist"
+                >
+                  ♡
+                </button>
+              </div>
+            </div>
+            <div class="product-card-meta">
+              <p class="collection">Lighting</p>
+              <h3 class="title">Jasmine Lamp</h3>
+              <p class="card-description">
+                A graceful floral lamp that combines delicate form with a gentle
+                glow, creating a calm and inviting atmosphere.
+              </p>
+              <div class="product-bottom">
+                <p class="price">₦175,000</p>
+                <button
+                  type="button"
+                  class="btn btn-primary js-add-to-cart"
+                  data-id="jasmine-lamp"
+                  data-title="Jasmine Lamp"
+                  data-price="175000"
+                  data-image="IMAGES/Jasmine lamp.jpg"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card reveal-on-scroll">
+            <div class="product-card-image">
+              <img
+                src="IMAGES/Maisie Lamp.jpg"
+                alt="Maisie table lamp"
+                loading="lazy"
+              />
+              <div class="quick-actions">
+
+                <button
+                  class="wishlist"
+                  aria-label="Add Maisie Table Lamp to wishlist"
+                >
+                  ♡
+                </button>
+              </div>
+            </div>
+            <div class="product-card-meta">
+              <p class="collection">Lighting</p>
+              <h3 class="title">Maisie Lamp</h3>
+              <p class="card-description">
+                A sculptural table lamp with a soft glow, perfect for bedside or
+                sideboard accents.
+              </p>
+              <div class="product-bottom">
+                <p class="price">₦165,000</p>
+                <button
+                  type="button"
+                  class="btn btn-primary js-add-to-cart"
+                  data-id="maisie-table-lamp"
+                  data-title="Maisie Table Lamp"
+                  data-price="165000"
+                  data-image="IMAGES/Maisie Lamp.jpg"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </article>
+          <article class="product-card reveal-on-scroll">
+            <div class="product-card-image">
+              <img
+                src="IMAGES/Tulip lamp.jpg"
+                alt="Tulip lamp"
+                loading="lazy"
+              />
+              <div class="quick-actions">
+
+                <button
+                  class="wishlist"
+                  aria-label="Add Tulip Lamp to wishlist"
+                >
+                  ♡
+                </button>
+              </div>
+            </div>
+            <div class="product-card-meta">
+              <p class="collection">Lighting</p>
+              <h3 class="title">Tulip Lamp</h3>
+              <p class="card-description">
+                A sculptural tulip-inspired lamp with a clean, graceful form
+                that adds soft light and contemporary charm to any interior.
+              </p>
+              <div class="product-bottom">
+                <p class="price">₦175,000</p>
+                <button
+                  type="button"
+                  class="btn btn-primary js-add-to-cart"
+                  data-id="tulip-lamp"
+                  data-title="Tulip Lamp"
+                  data-price="175000"
+                  data-image="IMAGES/Tulip lamp.jpg"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </article>
+          <article class="product-card reveal-on-scroll">
+            <div class="product-card-image">
+              <img
+                src="IMAGES/Aquila lamp.jpg"
+                alt="Aquila lamp"
+                loading="lazy"
+              />
+              <div class="quick-actions">
+
+                <button
+                  class="wishlist"
+                  aria-label="Add Aquila Lamp to wishlist"
+                >
+                  ♡
+                </button>
+              </div>
+            </div>
+            <div class="product-card-meta">
+              <p class="collection">Lighting</p>
+              <h3 class="title">Aquila Lamp</h3>
+              <p class="card-description">
+                A distinctive sculptural lamp with a confident presence,
+                designed to bring character, balance, and ambient warmth to your
+                space.
+              </p>
+              <div class="product-bottom">
+                <p class="price">₦175,000</p>
+                <button
+                  type="button"
+                  class="btn btn-primary js-add-to-cart"
+                  data-id="aquila-lamp"
+                  data-title="Aquila Lamp"
+                  data-price="175000"
+                  data-image="IMAGES/Aquila lamp.jpg"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </article>
+          <article class="product-card reveal-on-scroll">
+            <div class="product-card-image">
+              <img
+                src="IMAGES/Hazel Lamp.jpg"
+                alt="Hazel table lamp"
+                loading="lazy"
+              />
+              <div class="quick-actions">
+
+                <button
+                  class="wishlist"
+                  aria-label="Add Hazel Table Lamp to wishlist"
+                >
+                  ♡
+                </button>
+              </div>
+            </div>
+            <div class="product-card-meta">
+              <p class="collection">Lighting</p>
+              <h3 class="title">Hazel Lamp</h3>
+              <p class="card-description">
+                A sculptural table lamp with a soft glow, perfect for bedside or
+                sideboard accents.
+              </p>
+              <div class="product-bottom">
+                <p class="price">₦165,000</p>
+                <button
+                  type="button"
+                  class="btn btn-primary js-add-to-cart"
+                  data-id="hazel-lamp"
+                  data-title="Hazel Lamp"
+                  data-price="165000"
+                  data-image="IMAGES/Hazel Lamp.jpg"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card reveal-on-scroll">
+            <div class="product-card-image">
+              <img src="IMAGES/Evie lamp.jpg" alt="Evie lamp" loading="lazy" />
+              <div class="quick-actions">
+
+                <button class="wishlist" aria-label="Add Evie Lamp to wishlist">
+                  ♡
+                </button>
+              </div>
+            </div>
+            <div class="product-card-meta">
+              <p class="collection">Lighting</p>
+              <h3 class="title">Evie Lamp</h3>
+              <p class="card-description">
+                A beautifully balanced lamp with a soft, elegant silhouette that
+                adds warmth and understated charm to any interior.
+              </p>
+              <div class="product-bottom">
+                <p class="price">₦175,000</p>
+                <button
+                  type="button"
+                  class="btn btn-primary js-add-to-cart"
+                  data-id="evie-lamp"
+                  data-title="Evie Lamp"
+                  data-price="175000"
+                  data-image="IMAGES/Evie lamp.jpg"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card reveal-on-scroll">
+            <div class="product-card-image">
+              <img
+                src="IMAGES/Brenda Couch.jpg"
+                alt="Brenda couch"
+                loading="lazy"
+              />
+              <div class="quick-actions">
+
+                <button
+                  class="wishlist"
+                  aria-label="Add Brenda couch to wishlist"
+                >
+                  ♡
+                </button>
+              </div>
+            </div>
+            <div class="product-card-meta">
+              <p class="collection">Living</p>
+              <h3 class="title">Brenda Couch</h3>
+              <p class="card-description">
+                A generously proportioned couch with a refined silhouette and
+                inviting comfort, designed to create a stylish and relaxing
+                living space.
+              </p>
+              <div class="product-bottom">
+                <p class="price">₦1,250,000</p>
+                <button
+                  type="button"
+                  class="btn btn-primary js-add-to-cart"
+                  data-id="brenda-couch"
+                  data-title="Brenda Couch"
+                  data-price="1250000"
+                  data-image="IMAGES/Brenda Couch.jpg"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card reveal-on-scroll">
+            <div class="product-card-image">
+              <img
+                src="IMAGES/Peonie Couch.jpg"
+                alt="Peonie couch"
+                loading="lazy"
+              />
+              <div class="quick-actions">
+
+                <button
+                  class="wishlist"
+                  aria-label="Add Peonie couch to wishlist"
+                >
+                  ♡
+                </button>
+              </div>
+            </div>
+            <div class="product-card-meta">
+              <p class="collection">Living</p>
+              <h3 class="title">Peonie Couch</h3>
+              <p class="card-description">
+                A softly sculpted couch with elegant curves and generous
+                comfort, designed to bring a graceful statement to contemporary
+                interiors.
+              </p>
+              <div class="product-bottom">
+                <p class="price">₦1,450,000</p>
+                <button
+                  type="button"
+                  class="btn btn-primary js-add-to-cart"
+                  data-id="peonie-couch"
+                  data-title="Peonie Couch"
+                  data-price="1450000"
+                  data-image="IMAGES/Peonie Couch.jpg"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card reveal-on-scroll">
+            <div class="product-card-image">
+              <img
+                src="IMAGES/Envy Couch.jpg"
+                alt="Envy couch"
+                loading="lazy"
+              />
+              <div class="quick-actions">
+
+                <button
+                  class="wishlist"
+                  aria-label="Add Envy couch to wishlist"
+                >
+                  ♡
+                </button>
+              </div>
+            </div>
+            <div class="product-card-meta">
+              <p class="collection">Living</p>
+              <h3 class="title">Envy Couch</h3>
+              <p class="card-description">
+                A bold contemporary couch with a striking silhouette and deep
+                comfort, designed to become the centerpiece of a sophisticated
+                living room.
+              </p>
+              <div class="product-bottom">
+                <p class="price">₦1,550,000</p>
+                <button
+                  type="button"
+                  class="btn btn-primary js-add-to-cart"
+                  data-id="envy-couch"
+                  data-title="Envy Couch"
+                  data-price="1550000"
+                  data-image="IMAGES/Envy Couch.jpg"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card reveal-on-scroll">
+            <div class="product-card-image">
+              <img
+                src="IMAGES/Chic Rose Couch.jpg"
+                alt="Chic Rose couch"
+                loading="lazy"
+              />
+              <div class="quick-actions">
+
+                <button
+                  class="wishlist"
+                  aria-label="Add Chic Rose couch to wishlist"
+                >
+                  ♡
+                </button>
+              </div>
+            </div>
+            <div class="product-card-meta">
+              <p class="collection">Living</p>
+              <h3 class="title">Chic Rose Couch</h3>
+              <p class="card-description">
+                A refined couch with soft curves and an elegant presence,
+                combining luxurious comfort with a beautifully polished
+                aesthetic.
+              </p>
+              <div class="product-bottom">
+                <p class="price">₦1,600,000</p>
+                <button
+                  type="button"
+                  class="btn btn-primary js-add-to-cart"
+                  data-id="chic-rose-couch"
+                  data-title="Chic Rose Couch"
+                  data-price="1600000"
+                  data-image="IMAGES/Chic Rose Couch.jpg"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card reveal-on-scroll">
+            <div class="product-card-image">
+              <img
+                src="IMAGES/Midnight Sofa.jpg"
+                alt="Midnight sofa"
+                loading="lazy"
+              />
+              <div class="quick-actions">
+
+                <button
+                  class="wishlist"
+                  aria-label="Add Midnight sofa to wishlist"
+                >
+                  ♡
+                </button>
+              </div>
+            </div>
+            <div class="product-card-meta">
+              <p class="collection">Living</p>
+              <h3 class="title">Midnight Sofa</h3>
+              <p class="card-description">
+                A sophisticated deep-toned sofa with a bold silhouette and plush
+                seating, bringing dramatic elegance and comfort to the room.
+              </p>
+              <div class="product-bottom">
+                <p class="price">₦1,650,000</p>
+                <button
+                  type="button"
+                  class="btn btn-primary js-add-to-cart"
+                  data-id="midnight-sofa"
+                  data-title="Midnight Sofa"
+                  data-price="1650000"
+                  data-image="IMAGES/Midnight Sofa.jpg"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card reveal-on-scroll">
+            <div class="product-card-image">
+              <img
+                src="IMAGES/Lounge Sofa.jpg"
+                alt="Lounge sofa"
+                loading="lazy"
+              />
+              <div class="quick-actions">
+
+                <button
+                  class="wishlist"
+                  aria-label="Add Lounge sofa to wishlist"
+                >
+                  ♡
+                </button>
+              </div>
+            </div>
+            <div class="product-card-meta">
+              <p class="collection">Living</p>
+              <h3 class="title">Lounge Sofa</h3>
+              <p class="card-description">
+                A generously cushioned sofa with a relaxed silhouette, designed
+                for effortless comfort and refined everyday lounging.
+              </p>
+              <div class="product-bottom">
+                <p class="price">₦1,450,000</p>
+                <button
+                  type="button"
+                  class="btn btn-primary js-add-to-cart"
+                  data-id="lounge-sofa"
+                  data-title="Lounge Sofa"
+                  data-price="1450000"
+                  data-image="IMAGES/Lounge Sofa.jpg"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </article>
+          <article class="product-card reveal-on-scroll">
+            <div class="product-card-image">
+              <img
+                src="IMAGES/Aquila Sofa.jpg"
+                alt="Aquila sofa"
+                loading="lazy"
+              />
+              <div class="quick-actions">
+
+                <button
+                  class="wishlist"
+                  aria-label="Add Aquila sofa to wishlist"
+                >
+                  ♡
+                </button>
+              </div>
+            </div>
+            <div class="product-card-meta">
+              <p class="collection">Living</p>
+              <h3 class="title">Aquila Sofa</h3>
+              <p class="card-description">
+                A distinctive sculptural sofa with elegant proportions and deep
+                comfort, designed to make a confident statement in contemporary
+                interiors.
+              </p>
+              <div class="product-bottom">
+                <p class="price">₦1,750,000</p>
+                <button
+                  type="button"
+                  class="btn btn-primary js-add-to-cart"
+                  data-id="aquila-sofa"
+                  data-title="Aquila Sofa"
+                  data-price="1750000"
+                  data-image="IMAGES/Aquila Sofa.jpg"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card reveal-on-scroll">
+            <div class="product-card-image">
+              <img src="IMAGES/Zigi Sofa.jpg" alt="Zigi sofa" loading="lazy" />
+              <div class="quick-actions">
+
+                <button class="wishlist" aria-label="Add Zigi sofa to wishlist">
+                  ♡
+                </button>
+              </div>
+            </div>
+            <div class="product-card-meta">
+              <p class="collection">Living</p>
+              <h3 class="title">Zigi Sofa</h3>
+              <p class="card-description">
+                A distinctive modern sofa with a confident silhouette and
+                generous comfort, designed to add personality and style to the
+                living room.
+              </p>
+              <div class="product-bottom">
+                <p class="price">₦1,700,000</p>
+                <button
+                  type="button"
+                  class="btn btn-primary js-add-to-cart"
+                  data-id="zigi-sofa"
+                  data-title="Zigi Sofa"
+                  data-price="1700000"
+                  data-image="IMAGES/Zigi Sofa.jpg"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card reveal-on-scroll">
+            <div class="product-card-image">
+              <img src="IMAGES/Lily Sofa.jpg" alt="Lily sofa" loading="lazy" />
+              <div class="quick-actions">
+
+                <button class="wishlist" aria-label="Add Lily sofa to wishlist">
+                  ♡
+                </button>
+              </div>
+            </div>
+            <div class="product-card-meta">
+              <p class="collection">Living</p>
+              <h3 class="title">Lily Sofa</h3>
+              <p class="card-description">
+                A graceful sofa with soft contours and inviting cushioning,
+                bringing a light, elegant character to contemporary living
+                spaces.
+              </p>
+              <div class="product-bottom">
+                <p class="price">₦1,550,000</p>
+                <button
+                  type="button"
+                  class="btn btn-primary js-add-to-cart"
+                  data-id="lily-sofa"
+                  data-title="Lily Sofa"
+                  data-price="1550000"
+                  data-image="IMAGES/Lily Sofa.jpg"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card reveal-on-scroll">
+            <div class="product-card-image">
+              <img
+                src="IMAGES/Chloe Sofa.jpg"
+                alt="Chloe sofa"
+                loading="lazy"
+              />
+              <div class="quick-actions">
+
+                <button
+                  class="wishlist"
+                  aria-label="Add Chloe sofa to wishlist"
+                >
+                  ♡
+                </button>
+              </div>
+            </div>
+            <div class="product-card-meta">
+              <p class="collection">Living</p>
+              <h3 class="title">Chloe Sofa</h3>
+              <p class="card-description">
+                A beautifully proportioned sofa with a soft, polished
+                silhouette, offering a perfect balance of contemporary style and
+                everyday comfort.
+              </p>
+              <div class="product-bottom">
+                <p class="price">₦1,500,000</p>
+                <button
+                  type="button"
+                  class="btn btn-primary js-add-to-cart"
+                  data-id="chloe-sofa"
+                  data-title="Chloe Sofa"
+                  data-price="1500000"
+                  data-image="IMAGES/Chloe Sofa.jpg"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card reveal-on-scroll">
+            <div class="product-card-image">
+              <img
+                src="IMAGES/Seraphina Sofa.jpg"
+                alt="Seraphina sofa"
+                loading="lazy"
+              />
+              <div class="quick-actions">
+
+                <button
+                  class="wishlist"
+                  aria-label="Add Seraphina sofa to wishlist"
+                >
+                  ♡
+                </button>
+              </div>
+            </div>
+            <div class="product-card-meta">
+              <p class="collection">Living</p>
+              <h3 class="title">Seraphina Sofa</h3>
+              <p class="card-description">
+                An elegant statement sofa with graceful curves and luxurious
+                proportions, designed to bring sophistication and comfort to the
+                home.
+              </p>
+              <div class="product-bottom">
+                <p class="price">₦1,850,000</p>
+                <button
+                  type="button"
+                  class="btn btn-primary js-add-to-cart"
+                  data-id="seraphina-sofa"
+                  data-title="Seraphina Sofa"
+                  data-price="1850000"
+                  data-image="IMAGES/Seraphina Sofa.jpg"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card reveal-on-scroll">
+            <div class="product-card-image">
+              <img
+                src="IMAGES/Mid-Century Sofa.jpg"
+                alt="Mid-century sofa"
+                loading="lazy"
+              />
+              <div class="quick-actions">
+
+                <button
+                  class="wishlist"
+                  aria-label="Add Mid-Century sofa to wishlist"
+                >
+                  ♡
+                </button>
+              </div>
+            </div>
+            <div class="product-card-meta">
+              <p class="collection">Living</p>
+              <h3 class="title">Mid-Century Sofa</h3>
+              <p class="card-description">
+                A timeless mid-century inspired sofa with clean lines, tapered
+                details, and comfortable seating for a sophisticated interior.
+              </p>
+              <div class="product-bottom">
+                <p class="price">₦1,600,000</p>
+                <button
+                  type="button"
+                  class="btn btn-primary js-add-to-cart"
+                  data-id="mid-century-sofa"
+                  data-title="Mid-Century Sofa"
+                  data-price="1600000"
+                  data-image="IMAGES/Mid-Century Sofa.jpg"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card reveal-on-scroll">
+            <div class="product-card-image">
+              <img src="IMAGES/Nini Sofa.jpg" alt="Nini sofa" loading="lazy" />
+              <div class="quick-actions">
+
+                <button class="wishlist" aria-label="Add Nini sofa to wishlist">
+                  ♡
+                </button>
+              </div>
+            </div>
+            <div class="product-card-meta">
+              <p class="collection">Living</p>
+              <h3 class="title">Nini Sofa</h3>
+              <p class="card-description">
+                A charmingly rounded sofa with a soft, inviting form, created to
+                bring comfort and understated elegance to your living space.
+              </p>
+              <div class="product-bottom">
+                <p class="price">₦1,400,000</p>
+                <button
+                  type="button"
+                  class="btn btn-primary js-add-to-cart"
+                  data-id="nini-sofa"
+                  data-title="Nini Sofa"
+                  data-price="1400000"
+                  data-image="IMAGES/Nini Sofa.jpg"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card reveal-on-scroll">
+            <div class="product-card-image">
+              <img src="IMAGES/Min Sofa.jpg" alt="Min sofa" loading="lazy" />
+              <div class="quick-actions">
+
+                <button class="wishlist" aria-label="Add Min sofa to wishlist">
+                  ♡
+                </button>
+              </div>
+            </div>
+            <div class="product-card-meta">
+              <p class="collection">Living</p>
+              <h3 class="title">Min Sofa</h3>
+              <p class="card-description">
+                A clean and compact sofa with a minimalist profile, offering
+                comfortable seating and effortless style for modern interiors.
+              </p>
+              <div class="product-bottom">
+                <p class="price">₦1,300,000</p>
+                <button
+                  type="button"
+                  class="btn btn-primary js-add-to-cart"
+                  data-id="min-sofa"
+                  data-title="Min Sofa"
+                  data-price="1300000"
+                  data-image="IMAGES/Min Sofa.jpg"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card reveal-on-scroll">
+            <div class="product-card-image">
+              <img
+                src="IMAGES/Sunset Sofa.jpg"
+                alt="Sunset sofa"
+                loading="lazy"
+              />
+              <div class="quick-actions">
+
+                <button
+                  class="wishlist"
+                  aria-label="Add Sunset sofa to wishlist"
+                >
+                  ♡
+                </button>
+              </div>
+            </div>
+            <div class="product-card-meta">
+              <p class="collection">Living</p>
+              <h3 class="title">Sunset Sofa</h3>
+              <p class="card-description">
+                A warm and inviting sofa with soft curves and generous seating,
+                designed to create a relaxed and welcoming atmosphere.
+              </p>
+              <div class="product-bottom">
+                <p class="price">₦1,550,000</p>
+                <button
+                  type="button"
+                  class="btn btn-primary js-add-to-cart"
+                  data-id="sunset-sofa"
+                  data-title="Sunset Sofa"
+                  data-price="1550000"
+                  data-image="IMAGES/Sunset Sofa.jpg"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card reveal-on-scroll">
+            <div class="product-card-image">
+              <img
+                src="IMAGES/Zurichic chair.jpg"
+                alt="Zurichic chair"
+                loading="lazy"
+              />
+              <div class="quick-actions">
+
+                <button
+                  class="wishlist"
+                  aria-label="Add Zurichic chair to wishlist"
+                >
+                  ♡
+                </button>
+              </div>
+            </div>
+            <div class="product-card-meta">
+              <p class="collection">Seating</p>
+              <h3 class="title">Zurichic Chair</h3>
+              <p class="card-description">
+                A stylish chair with a modern design and comfortable seating,
+                perfect for adding a touch of elegance to any room.
+              </p>
+              <div class="product-bottom">
+                <p class="price">₦550,000</p>
+                <button
+                  type="button"
+                  class="btn btn-primary js-add-to-cart"
+                  data-id="zurichic-chair"
+                  data-title="Zurichic Chair"
+                  data-price="1550000"
+                  data-image="IMAGES/Zurichic chair.jpg"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="collection-infinite container">
+        <div class="infinite-panel">
+          <h2>Endless browsing, no hard stops.</h2>
+          <p>
+            Discover more furniture and styling ideas as you scroll. Each
+            section connects with generous spacing and subtle motion.
+          </p>
+        </div>
+        <div class="infinite-panel panel-alt">
+          <h2>Curated for cohesive rooms.</h2>
+          <p>
+            Every product feels part of the same story, with textures, tones,
+            and details designed to layer together.
+          </p>
+        </div>
+      </section>
+
+      <section class="newsletter container">
+        <div class="newsletter-copy">
+          <h2>Stay inspired</h2>
+          <p>Sign up for new arrivals, styling ideas, and exclusive offers.</p>
+        </div>
+        <form class="newsletter-form">
+          <input
+            type="email"
+            placeholder="Enter your email"
+            aria-label="Email address"
+          />
+          <button class="btn" type="submit">Subscribe</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-columns">
+          <div class="footer-col footer-brand">
+            <a class="logo" href="index.html"
+              ><img
+                class="brand-logo"
+                src="IMAGES/Document-removebg-preview.png"
+                alt="OAK & ASH logo"
+            /></a>
+            <p class="footer-desc">
+              Handcrafted furniture • Sustainable wood • Built to last
+            </p>
+          </div>
+
+          <div class="footer-col">
+            <h4>Shop</h4>
+            <ul>
+              <li><a href="products.html">All Products</a></li>
+              <li><a href="products.html">Living</a></li>
+              <li><a href="products.html">Dining</a></li>
+              <li><a href="products.html">Bedroom</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="about.html">About</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Press</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Support</h4>
+            <ul>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Shipping & Returns</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col newsletter-col">
+            <h4>Newsletter</h4>
+            <p>Get styling tips, new arrivals and exclusive offers.</p>
+            <form class="footer-newsletter" action="#" method="post">
+              <input
+                type="email"
+                name="email"
+                placeholder="Enter your email"
+                aria-label="Email address"
+              />
+              <button class="btn" type="submit">Subscribe</button>
+            </form>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div class="footer-legal">
+            © <span id="year"></span> OAK & ASH. All rights reserved.
+          </div>
+          <div class="footer-payments">
+            Payment methods accepted: Visa, Mastercard, PayPal
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.0.20/bundled/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

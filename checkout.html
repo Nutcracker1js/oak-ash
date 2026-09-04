@@ -1,0 +1,395 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>About — OAK & ASH</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+     <link rel="icon" type="image/png" href="IMAGES/Ellipse-removebg-preview.png">
+  </head>
+  <body class="checkout-page">
+    <header class="site-header alt-header">
+      <div class="navbar container nav-row">
+        <button id="nav-toggle" aria-expanded="false" aria-label="Open menu">
+          ☰
+        </button>
+        <a class="logo" href="index.html">
+          <img
+            class="brand-logo"
+            src="IMAGES/Document-removebg-preview.png"
+            alt="OAK & ASH logo"
+          />
+        </a>
+       <div class="mobile-actions">
+          <button class="icon-btn" aria-label="Wishlist">♡</button>
+          <button class="icon-btn" aria-label="Cart">🛒</button>
+        </div>
+        <nav class="site-nav" id="site-nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="account.html">Account</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div
+        class="mobile-menu-overlay"
+        id="mobile-menu-overlay"
+        aria-hidden="true"
+      >
+        <div class="mobile-menu-inner">
+          <button
+            class="close-menu"
+            id="mobile-menu-close"
+            aria-label="Close menu"
+          >
+            ×
+          </button>
+          <div class="mobile-menu-links">
+            <a href="products.html">Products</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+          </div>
+          <div class="mobile-menu-footer">
+            <a href="account.html">Account</a>
+            <a href="favorites.html">Wishlist</a>
+            <a href="cart.html">Cart</a>
+          </div>
+        </div>
+      </div>
+      <!-- Mini Cart -->
+      <div id="mini-cart" class="mini-cart" aria-hidden="true">
+        <div
+          class="mini-cart-panel"
+          id="mini-cart-panel"
+          role="dialog"
+          aria-label="Cart"
+        >
+          <header class="mini-cart-header">
+            <h3>Cart (<span id="mini-cart-count">0</span>)</h3>
+            <button
+              class="close-menu"
+              id="mini-cart-close"
+              aria-label="Close cart"
+            >
+              ×
+            </button>
+          </header>
+          <div class="mini-cart-items" id="mini-cart-items"></div>
+          <div class="mini-cart-footer">
+            <div class="mini-cart-subtotal">
+              Subtotal <strong id="mini-cart-subtotal">₦0</strong>
+            </div>
+            <div class="mini-cart-actions">
+              <a href="cart.html" class="btn">View Cart</a>
+              <button id="mini-cart-checkout" class="btn btn-primary">
+                Checkout
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="mini-cart-backdrop" id="mini-cart-backdrop"></div>
+      </div>
+    </header>
+
+    <main class="page-section">
+      <div class="checkout-grid">
+        <form id="checkout-form" class="checkout-form" novalidate>
+          <div class="checkout-section" data-step="1">
+            <h2 class="section-title">Contact Information</h2>
+            <label class="sr-only">Email</label>
+            <input
+              name="email"
+              type="email"
+              required
+              placeholder="Email address"
+              class="input-field"
+            />
+            <div class="checkbox-field checkbox-row">
+              <input id="subscribe" type="checkbox" name="subscribe" /><label
+                for="subscribe"
+                >Email me about new arrivals</label
+              >
+            </div>
+          </div>
+
+          <div class="checkout-section" data-step="1">
+            <h2 class="section-title">Delivery Address</h2>
+            <div class="field-grid">
+              <input
+                name="first"
+                required
+                placeholder="First name"
+                class="input-field"
+              />
+              <input
+                name="last"
+                required
+                placeholder="Last name"
+                class="input-field"
+              />
+              <input name="phone" placeholder="Phone" class="input-field" />
+              <input
+                name="email2"
+                placeholder="Email (optional)"
+                class="input-field"
+              />
+              <select name="country" class="input-field">
+                <option value="">Select country</option>
+                <option value="NG">Nigeria</option>
+                <option value="US">United States</option>
+              </select>
+              <input name="state" placeholder="State" class="input-field" />
+              <input name="city" placeholder="City" class="input-field" />
+              <input
+                name="zip"
+                placeholder="Postal code"
+                required
+                class="input-field"
+              />
+              <input
+                name="street"
+                placeholder="Street address"
+                required
+                class="input-field full-width"
+              />
+              <input
+                name="apartment"
+                placeholder="Apt, suite, etc. (optional)"
+                class="input-field full-width"
+              />
+            </div>
+          </div>
+
+          <div class="checkout-section" data-step="2">
+            <h2 class="section-title">Shipping Method</h2>
+            <div class="radio-list">
+              <label class="shipping-option"
+                ><div>
+                  <input
+                    type="radio"
+                    name="delivery"
+                    value="standard"
+                    data-price="0"
+                    checked
+                  />
+                  <strong>Standard Delivery</strong>
+                  <small>3–5 Business Days — FREE</small>
+                </div>
+                <div>FREE</div></label
+              >
+
+              <label class="shipping-option"
+                ><div>
+                  <input
+                    type="radio"
+                    name="delivery"
+                    value="express"
+                    data-price="15000"
+                  />
+                  <strong>Express Delivery</strong>
+                  <small>1–2 Business Days</small>
+                </div>
+                <div>₦15,000</div></label
+              >
+
+              <label class="shipping-option"
+                ><div>
+                  <input
+                    type="radio"
+                    name="delivery"
+                    value="pickup"
+                    data-price="0"
+                  />
+                  <strong>Store Pickup</strong>
+                  <small>Available Today</small>
+                </div>
+                <div>—</div></label
+              >
+            </div>
+          </div>
+
+          <div class="checkout-section" data-step="3">
+            <h2 class="section-title">Payment</h2>
+            <div class="payment-methods">
+              <label
+                ><input type="radio" name="payment" value="card" checked />
+                Credit / Debit Card</label
+              >
+              <label
+                ><input type="radio" name="payment" value="paystack" />
+                Paystack</label
+              >
+              <label
+                ><input type="radio" name="payment" value="flutterwave" />
+                Flutterwave</label
+              >
+              <label
+                ><input type="radio" name="payment" value="bank" /> Bank
+                Transfer</label
+              >
+            </div>
+
+            <div class="section-group">
+              <input
+                name="card"
+                placeholder="Card number"
+                class="input-field"
+                required
+              />
+              <div class="field-grid field-grid-compact">
+                <input
+                  name="expiry"
+                  placeholder="MM / YY"
+                  class="input-field"
+                  required
+                />
+                <input
+                  name="cvc"
+                  placeholder="CVC"
+                  class="input-field"
+                  required
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="checkout-section" data-step="3">
+            <h2 class="section-title">Billing Address</h2>
+            <div class="billing-same">
+              <input id="same-as-shipping" type="checkbox" checked />
+              <label for="same-as-shipping"
+                >Billing address same as shipping</label
+              >
+            </div>
+            <div id="billing-fields" class="billing-hidden">
+              <input
+                name="b_street"
+                placeholder="Billing street address"
+                class="input-field"
+              />
+            </div>
+          </div>
+
+          <div class="checkout-section" data-step="4">
+            <h2 class="section-title">Review & Place Order</h2>
+            <div style="color: #6b6b6b; margin-bottom: 0.75rem">
+              Review your details, then place your order.
+            </div>
+            <button type="submit" class="place-order">Place Order</button>
+            <div style="margin-top: 0.6rem; font-size: 0.85rem; color: #6b6b6b">
+              By placing your order you agree to our <a href="#">Terms</a> and
+              <a href="#">Privacy Policy</a>.
+            </div>
+          </div>
+        </form>
+
+        <aside class="checkout-summary" id="checkout-summary">
+          <h3 style="margin-top: 0">Order Summary</h3>
+          <div id="checkout-items"></div>
+
+          <div class="order-totals">
+            <div class="total-row">
+              <span>Subtotal</span><span id="checkout-subtotal">₦0</span>
+            </div>
+            <div class="total-row">
+              <span>Shipping</span
+              ><span id="checkout-shipping">Calculated</span>
+            </div>
+            <div class="total-row">
+              <span>Discount</span><span id="checkout-discount">-₦0</span>
+            </div>
+            <div class="total-row total-row-grand">
+              <strong>Grand Total</strong
+              ><strong id="checkout-total">₦0</strong>
+            </div>
+          </div>
+
+          <div class="promo-row">
+            <input
+              id="promo-code"
+              placeholder="Promo code"
+              class="input-field"
+            />
+            <button id="apply-promo" class="btn">Apply</button>
+          </div>
+
+          <div class="trust-badges">
+            <div class="trust-badge">✓ Secure Payment</div>
+            <div class="trust-badge">✓ SSL Encryption</div>
+            <div class="trust-badge">✓ 30-Day Returns</div>
+            <div class="trust-badge">✓ Warranty Included</div>
+          </div>
+        </aside>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-columns">
+          <div class="footer-col footer-brand">
+            <a class="logo" href="index.html"
+              ><img
+                class="brand-logo"
+                src="IMAGES/Document-removebg-preview.png"
+                alt="OAK & ASH logo"
+            /></a>
+            <p class="footer-desc">
+              Handcrafted furniture • Sustainable wood • Built to last
+            </p>
+          </div>
+
+          <div class="footer-col">
+            <h4>Shop</h4>
+            <ul>
+              <li><a href="products.html">All Products</a></li>
+              <li><a href="products.html">Living</a></li>
+              <li><a href="products.html">Dining</a></li>
+              <li><a href="products.html">Bedroom</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="about.html">About</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Press</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Support</h4>
+            <ul>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Shipping & Returns</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col newsletter-col">
+            <h4>Newsletter</h4>
+            <p>Get styling tips, new arrivals and exclusive offers.</p>
+            <form class="footer-newsletter" action="#" method="post">
+              <input
+                type="email"
+                name="email"
+                placeholder="Enter your email"
+                aria-label="Email address"
+              />
+              <button class="btn" type="submit">Subscribe</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

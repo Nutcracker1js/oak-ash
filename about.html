@@ -1,0 +1,321 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>About — OAK & ASH</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+   <link rel="icon" type="image/png" href="IMAGES/Ellipse-removebg-preview.png">
+</head>
+<body>
+  <header class="site-header alt-header">
+    <div class="navbar container nav-row">
+      <button id="nav-toggle" aria-expanded="false" aria-label="Open menu">☰</button>
+      <a class="logo" href="index.html">
+        <img class="brand-logo" src="IMAGES/Document-removebg-preview.png" alt="OAK & ASH logo">
+      </a>
+    <div class="mobile-actions">
+          <button class="icon-btn" aria-label="Wishlist">♡</button>
+          <button class="icon-btn" aria-label="Cart">🛒</button>
+        </div>
+        <nav class="site-nav" id="site-nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="account.html">Account</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div
+        class="mobile-menu-overlay"
+        id="mobile-menu-overlay"
+        aria-hidden="true"
+      >
+        <div class="mobile-menu-inner">
+          <button
+            class="close-menu"
+            id="mobile-menu-close"
+            aria-label="Close menu"
+          >
+            ×
+          </button>
+          <div class="mobile-menu-links">
+            <a href="products.html">Products</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+          </div>
+          <div class="mobile-menu-footer">
+            <a href="account.html">Account</a>
+            <a href="favorites.html">Wishlist</a>
+            <a href="cart.html">Cart</a>
+          </div>
+        </div>
+      </div>
+      <!-- Mini Cart -->
+      <div id="mini-cart" class="mini-cart" aria-hidden="true">
+        <div class="mini-cart-panel" id="mini-cart-panel" role="dialog" aria-label="Cart">
+          <header class="mini-cart-header">
+            <h3>Cart (<span id="mini-cart-count">0</span>)</h3>
+            <button class="close-menu" id="mini-cart-close" aria-label="Close cart">×</button>
+          </header>
+          <div class="mini-cart-items" id="mini-cart-items"></div>
+          <div class="mini-cart-footer">
+            <div class="mini-cart-subtotal">Subtotal <strong id="mini-cart-subtotal">₦0</strong></div>
+            <div class="mini-cart-actions">
+              <a href="cart.html" class="btn">View Cart</a>
+              <button id="mini-cart-checkout" class="btn btn-primary">Checkout</button>
+            </div>
+          </div>
+        </div>
+        <div class="mini-cart-backdrop" id="mini-cart-backdrop"></div>
+      </div>
+    </header>
+
+  <main>
+    <section class="page-hero about-hero">
+      <div class="hero-content container">
+        <span class="eyebrow">About Us</span>
+        <h1>Crafted for beautiful living.</h1>
+        <p>OAK & ASH makes furniture that feels timeless, comfortable, and built to last. Each piece is designed with care and made by hand in small batches.</p>
+        <div class="hero-actions">
+          <a class="btn" href="products.html">View collection</a>
+          <a class="link-btn" href="#brand-intro">Our story</a>
+        </div>
+        <div class="scroll-indicator">
+          <span>Scroll</span>
+          <div class="arrow"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="brand-intro" class="page-section container brand-intro">
+      <div class="brand-intro-text">
+        <h2>We build furniture with intent.</h2>
+        <p>From the first line drawing to the final finish, our process combines thoughtful design with skilled craftsmanship.</p>
+        <p>We source premium oak and ash, shape each component by hand, and finish every surface so it feels warm and natural in the home.</p>
+      </div>
+      <div class="brand-intro-image">
+        <img src="IMAGES/de4bc1a8a3d5f22f0ededd6a1e383d97.jpg" alt="Lifestyle interior with furniture">
+      </div>
+    </section>
+
+    <section class="page-section container story-timeline">
+      <div class="section-heading">
+        <h2>Our story</h2>
+        <p>Since our founding, we have grown from a small workshop into a brand known for thoughtful furniture and warm, approachable design.</p>
+      </div>
+      <div class="timeline-row">
+        <article class="timeline-point">
+          <div class="timeline-marker"></div>
+          <div class="timeline-copy">
+            <span class="timeline-year">2018</span>
+            <h3>Founded</h3>
+            <p>Our first studio opened with a focus on solid joinery and handmade oak furniture.</p>
+          </div>
+        </article>
+        <article class="timeline-point">
+          <div class="timeline-marker"></div>
+          <div class="timeline-copy">
+            <span class="timeline-year">2019</span>
+            <h3>First Collection</h3>
+            <p>We launched our debut collection of tables, seating, and casegoods for modern interiors.</p>
+          </div>
+        </article>
+        <article class="timeline-point">
+          <div class="timeline-marker"></div>
+          <div class="timeline-copy">
+            <span class="timeline-year">2021</span>
+            <h3>Expanded Nationwide</h3>
+            <p>Our studio grew and we began shipping to customers across the country.</p>
+          </div>
+        </article>
+        <article class="timeline-point">
+          <div class="timeline-marker"></div>
+          <div class="timeline-copy">
+            <span class="timeline-year">2024</span>
+            <h3>International Delivery</h3>
+            <p>We introduced international shipping and began partnering with boutiques abroad.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="page-section container mission-vision">
+      <article class="mission-card card-hover">
+        <h3>Mission</h3>
+        <p>To create furniture that balances quiet luxury with everyday ease, using materials chosen for beauty and durability.</p>
+      </article>
+      <article class="vision-card card-hover">
+        <h3>Vision</h3>
+        <p>To be recognized for modern craftsmanship, thoughtful materials, and pieces that feel both meaningful and effortless.</p>
+      </article>
+    </section>
+
+    <section class="page-section container craftsmanship">
+      <div class="craftsmanship-image">
+        <img src="IMAGES/living room.jpg" alt="Workshop scene">
+      </div>
+      <div class="craftsmanship-copy">
+        <h2>Craftsmanship at every step</h2>
+        <p>We combine traditional woodworking techniques with modern finishes. Every board is selected for stability, every joint is checked for strength, and every surface is sanded by hand.</p>
+      </div>
+    </section>
+
+    <section class="page-section container philosophy">
+      <article class="philosophy-card">
+        <div class="philosophy-image"><img src="IMAGES/e887a5b41c117ff6a8e086e158d0e97a.jpg" alt="Living room furniture"></div>
+        <div class="philosophy-copy">
+          <h3>Design with purpose</h3>
+          <p>Each piece is shaped to feel balanced and livable. We start with proportion and refine details so furniture works beautifully in the room.</p>
+        </div>
+      </article>
+      <article class="philosophy-card reverse">
+        <div class="philosophy-copy">
+          <h3>Material-driven style</h3>
+          <p>Natural grain, warm textures, and simple silhouettes create a calm foundation that complements both modern and traditional interiors.</p>
+        </div>
+        <div class="philosophy-image"><img src="IMAGES/a9927936d4dd0907283b5fdb41ced544.jpg" alt="Workshop wood detail"></div>
+      </article>
+    </section>
+
+    <section class="page-section container materials-grid-section">
+      <div class="section-heading">
+        <h2>Materials & sustainability</h2>
+        <p>We choose materials that are beautiful, durable, and responsibly sourced.</p>
+      </div>
+      <div class="materials-grid">
+        <article class="material-card">
+          <div class="material-icon">♻️</div>
+          <h3>Sustainable</h3>
+          <p>Oak and ash are sourced from responsibly managed suppliers that support forest health.</p>
+        </article>
+        <article class="material-card">
+          <div class="material-icon">🌳</div>
+          <h3>Hardwood</h3>
+          <p>These natural timbers offer strength, warmth, and a beautiful grain that deepens with age.</p>
+        </article>
+        <article class="material-card">
+          <div class="material-icon">🛠️</div>
+          <h3>Handmade</h3>
+          <p>Small-batch production ensures each piece receives the care and finish it deserves.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="page-section container why-choose-grid">
+      <div class="why-card">
+        <h3>Premium materials</h3>
+      </div>
+      <div class="why-card">
+        <h3>Timeless design</h3>
+      </div>
+      <div class="why-card">
+        <h3>Nationwide delivery</h3>
+      </div>
+      <div class="why-card">
+        <h3>Warranty</h3>
+      </div>
+      <div class="why-card">
+        <h3>Secure payments</h3>
+      </div>
+      <div class="why-card">
+        <h3>Dedicated support</h3>
+      </div>
+    </section>
+
+    <section class="page-section container testimonials-section">
+      <div class="section-heading">
+        <h2>Customer testimonials</h2>
+        <p>Real stories from customers who love their OAK & ASH pieces.</p>
+      </div>
+      <div class="testimonial-slider">
+        <article class="testimonial-card">
+          <p>“Beautiful furniture with a strong sense of calm and quality. The table exceeded every expectation.”</p>
+          <strong>— Maya R.</strong>
+        </article>
+        <article class="testimonial-card">
+          <p>“Service was lovely and the finished piece fits perfectly in our home. Every detail feels thoughtful.”</p>
+          <strong>— Jordan A.</strong>
+        </article>
+      </div>
+    </section>
+
+    <section class="cta-banner page-section">
+      <div class="cta-copy container">
+        <h2>Ready to transform your home?</h2>
+        <p>Explore the collection and discover pieces that bring warmth, texture, and calm to every room.</p>
+        <a class="btn" href="products.html">Shop collection</a>
+      </div>
+    </section>
+
+    <section class="newsletter container">
+      <div class="newsletter-copy">
+        <h2>Stay inspired</h2>
+        <p>Sign up for new arrivals, styling ideas, and exclusive offers.</p>
+      </div>
+      <form class="newsletter-form">
+        <input type="email" placeholder="Enter your email" aria-label="Email address">
+        <button class="btn" type="submit">Subscribe</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-columns">
+        <div class="footer-col footer-brand">
+          <a class="logo" href="index.html"><img class="brand-logo" src="IMAGES/Document-removebg-preview.png" alt="OAK & ASH logo"></a>
+          <p class="footer-desc">Handcrafted furniture • Sustainable wood • Built to last</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Shop</h4>
+          <ul>
+            <li><a href="products.html">All Products</a></li>
+            <li><a href="products.html">Living</a></li>
+            <li><a href="products.html">Dining</a></li>
+            <li><a href="products.html">Bedroom</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Press</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Shipping & Returns</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col newsletter-col">
+          <h4>Newsletter</h4>
+          <p>Get styling tips, new arrivals and exclusive offers.</p>
+          <form class="footer-newsletter" action="#" method="post">
+            <input type="email" name="email" placeholder="Enter your email" aria-label="Email address">
+            <button class="btn" type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-legal">© <span id="year"></span> OAK & ASH. All rights reserved.</div>
+      
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

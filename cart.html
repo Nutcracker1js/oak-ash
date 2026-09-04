@@ -1,0 +1,366 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>About — OAK & ASH</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+     <link rel="icon" type="image/png" href="IMAGES/Ellipse-removebg-preview.png">
+  </head>
+  <body class="cart-page">
+    <header class="site-header alt-header">
+      <div class="navbar container nav-row">
+        <button id="nav-toggle" aria-expanded="false" aria-label="Open menu">
+          ☰
+        </button>
+        <a class="logo" href="index.html">
+          <img
+            class="brand-logo"
+            src="IMAGES/Document-removebg-preview.png"
+            alt="OAK & ASH logo"
+          />
+        </a>
+        <div class="mobile-actions">
+          <button class="icon-btn" aria-label="Wishlist">♡</button>
+          <button class="icon-btn" aria-label="Cart">🛒</button>
+        </div>
+        <nav class="site-nav" id="site-nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="account.html">Account</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div
+        class="mobile-menu-overlay"
+        id="mobile-menu-overlay"
+        aria-hidden="true"
+      >
+        <div class="mobile-menu-inner">
+          <button
+            class="close-menu"
+            id="mobile-menu-close"
+            aria-label="Close menu"
+          >
+            ×
+          </button>
+          <div class="mobile-menu-links">
+            <a href="products.html">Products</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+          </div>
+          <div class="mobile-menu-footer">
+            <a href="account.html">Account</a>
+            <a href="favorites.html">Wishlist</a>
+            <a href="cart.html">Cart</a>
+          </div>
+        </div>
+      </div>
+      <!-- Mini Cart -->
+      <div id="mini-cart" class="mini-cart" aria-hidden="true">
+        <div
+          class="mini-cart-panel"
+          id="mini-cart-panel"
+          role="dialog"
+          aria-label="Cart"
+        >
+          <header class="mini-cart-header">
+            <h3>Cart (<span id="mini-cart-count">0</span>)</h3>
+            <button
+              class="close-menu"
+              id="mini-cart-close"
+              aria-label="Close cart"
+            >
+              ×
+            </button>
+          </header>
+          <div class="mini-cart-items" id="mini-cart-items"></div>
+          <div class="mini-cart-footer">
+            <div class="mini-cart-subtotal">
+              Subtotal <strong id="mini-cart-subtotal">₦0</strong>
+            </div>
+            <div class="mini-cart-actions">
+              <a href="cart.html" class="btn">View Cart</a>
+              <button id="mini-cart-checkout" class="btn btn-primary">
+                Checkout
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="mini-cart-backdrop" id="mini-cart-backdrop"></div>
+      </div>
+    </header>
+
+    <main class="container page-section cart-page">
+      <div class="cart-grid">
+        <section class="cart-items" id="cart-page-items">
+          <div
+            style="
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              gap: 1rem;
+            "
+          >
+            <h1 class="cart-title">Your Cart</h1>
+            <div>
+              <button id="clear-cart" class="btn btn-ghost">Clear cart</button>
+            </div>
+          </div>
+
+          <div id="cart-list" class="cart-list" aria-live="polite"></div>
+        </section>
+
+        <aside class="order-summary" id="order-summary">
+          <div class="tabs-panel">
+            <h3>Order Summary</h3>
+            <div class="summary-row">
+              <span>Subtotal</span><strong id="summary-subtotal">₦0</strong>
+            </div>
+            <div class="summary-row">
+              <span>Shipping</span
+              ><span id="summary-shipping">Calculated at checkout</span>
+            </div>
+            <div class="summary-total">
+              <strong>Total</strong><strong id="summary-total">₦0</strong>
+            </div>
+            <div class="promo-block">
+              <input
+                id="promo-code"
+                placeholder="Promo code"
+                class="input-field"
+              />
+              <button id="apply-promo" class="btn">Apply</button>
+            </div>
+            <div class="summary-actions">
+              <a
+                href="checkout.html"
+                id="go-to-checkout"
+                class="btn btn-primary"
+                style="flex: 1"
+                >Checkout</a
+              >
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      <section class="page-section recommendations">
+        <div class="recommendations-header">
+          <div>
+            <h3>You May Also Like</h3>
+            <p class="recommendations-sub">
+              Discover more pieces for your space
+            </p>
+          </div>
+          <div class="recommendations-controls">
+            <button class="rec-arrow rec-prev" aria-label="Scroll left">
+              ←
+            </button>
+            <button class="rec-arrow rec-next" aria-label="Scroll right">
+              →
+            </button>
+          </div>
+        </div>
+
+        <div class="recommendations-track-wrap">
+          <div class="recommendations-track" role="list">
+        
+            <div class="rec-card" role="listitem">
+              <div
+                class="rec-image"
+                style="
+                  background-image: url(&quot;IMAGES/Nini Office Chair.jpg&quot;);
+                "
+              ></div>
+              <div class="rec-copy">
+                <div class="rec-title">Nini Office Chair</div>
+                <div class="rec-price">₦350,000</div>
+                <button
+                  class="btn js-add-to-cart"
+                  data-id="nini-office-chair"
+                  data-title="Nini Office Chair"
+                  data-price="350000"
+                  data-image="IMAGES/Nini Office Chair.jpg"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+            <div class="rec-card" role="listitem">
+              <div
+                class="rec-image"
+                style="
+                  background-image: url(&quot;IMAGES/COFFEE TABLE.jpg&quot;);
+                "
+              ></div>
+              <div class="rec-copy">
+                <div class="rec-title">Ivy Coffee Table</div>
+                <div class="rec-price">₦125,000</div>
+                <button
+                  class="btn js-add-to-cart"
+                  data-id="ivy-coffee-table"
+                  data-title="Ivy Coffee Table"
+                  data-price="125000"
+                  data-image="IMAGES/COFFEE TABLE.jpg"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+            <div class="rec-card" role="listitem">
+              <div
+                class="rec-image"
+                style="background-image: url(&quot;IMAGES/Oak Table.jpg&quot;)"
+              ></div>
+              <div class="rec-copy">
+                <div class="rec-title">Oak Table</div>
+                <div class="rec-price">₦125,000</div>
+                <button
+                  class="btn js-add-to-cart"
+                  data-id="oak-table"
+                  data-title="Oak Table"
+                  data-price="125000"
+                  data-image="IMAGES/Oak Table.jpg"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+            <div class="rec-card" role="listitem">
+              <div
+                class="rec-image"
+                style="background-image: url(&quot;IMAGES/bedframe.jpg&quot;)"
+              ></div>
+              <div class="rec-copy">
+                <div class="rec-title">Min Bed Frame</div>
+                <div class="rec-price">₦1,899,000</div>
+                <button
+                  class="btn js-add-to-cart"
+                  data-id="min-bed-frame"
+                  data-title="Min Bed Frame"
+                  data-price="1899000"
+                  data-image="IMAGES/bedframe.jpg"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+            <div class="rec-card" role="listitem">
+              <div
+                class="rec-image"
+                style="
+                  background-image: url(&quot;IMAGES/accent table.jpg&quot;);
+                "
+              ></div>
+              <div class="rec-copy">
+                <div class="rec-title">Accent Table</div>
+                <div class="rec-price">₦349,000</div>
+                <button
+                  class="btn js-add-to-cart"
+                  data-id="accent-table"
+                  data-title="Accent Table"
+                  data-price="349000"
+                  data-image="IMAGES/accent table.jpg"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+            <div class="rec-card" role="listitem">
+              <div
+                class="rec-image"
+                style="background-image: url(&quot;IMAGES/Xena Couch.jpg&quot;)"
+              ></div>
+              <div class="rec-copy">
+                <div class="rec-title">Xena Couch</div>
+                <div class="rec-price">₦699,000</div>
+                <button
+                  class="btn js-add-to-cart"
+                  data-id="xena-couch"
+                  data-title="Xena Couch"
+                  data-price="699000"
+                  data-image="IMAGES/Xena Couch.jpg"
+                >
+                  Add to cart
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-columns">
+          <div class="footer-col footer-brand">
+            <a class="logo" href="index.html"
+              ><img
+                class="brand-logo"
+                src="IMAGES/Document-removebg-preview.png"
+                alt="OAK & ASH logo"
+            /></a>
+            <p class="footer-desc">
+              Handcrafted furniture • Sustainable wood • Built to last
+            </p>
+          </div>
+
+          <div class="footer-col">
+            <h4>Shop</h4>
+            <ul>
+              <li><a href="products.html">All Products</a></li>
+              <li><a href="products.html">Living</a></li>
+              <li><a href="products.html">Dining</a></li>
+              <li><a href="products.html">Bedroom</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="about.html">About</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Press</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Support</h4>
+            <ul>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Shipping & Returns</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col newsletter-col">
+            <h4>Newsletter</h4>
+            <p>Get styling tips, new arrivals and exclusive offers.</p>
+            <form class="footer-newsletter" action="#" method="post">
+              <input
+                type="email"
+                name="email"
+                placeholder="Enter your email"
+                aria-label="Email address"
+              />
+              <button class="btn" type="submit">Subscribe</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.0.20/bundled/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

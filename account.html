@@ -1,0 +1,319 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>About — OAK & ASH</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="account.css" />
+     <link rel="icon" type="image/png" href="IMAGES/Ellipse-removebg-preview.png">
+  </head>
+  <body class="checkout-page">
+    <header class="site-header alt-header">
+      <div class="navbar container nav-row">
+        <button id="nav-toggle" aria-expanded="false" aria-label="Open menu">
+          ☰
+        </button>
+        <a class="logo" href="index.html">
+          <img
+            class="brand-logo"
+            src="IMAGES/Document-removebg-preview.png"
+            alt="OAK & ASH logo"
+          />
+        </a>
+    <div class="mobile-actions">
+          <button class="icon-btn" aria-label="Wishlist">♡</button>
+          <button class="icon-btn" aria-label="Cart">🛒</button>
+        </div>
+        <nav class="site-nav" id="site-nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="account.html">Account</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div
+        class="mobile-menu-overlay"
+        id="mobile-menu-overlay"
+        aria-hidden="true"
+      >
+        <div class="mobile-menu-inner">
+          <button
+            class="close-menu"
+            id="mobile-menu-close"
+            aria-label="Close menu"
+          >
+            ×
+          </button>
+          <div class="mobile-menu-links">
+            <a href="products.html">Products</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+          </div>
+          <div class="mobile-menu-footer">
+            <a href="account.html">Account</a>
+            <a href="favorites.html">Wishlist</a>
+            <a href="cart.html">Cart</a>
+          </div>
+        </div>
+      </div>
+      <!-- Mini Cart -->
+      <div id="mini-cart" class="mini-cart" aria-hidden="true">
+        <div
+          class="mini-cart-panel"
+          id="mini-cart-panel"
+          role="dialog"
+          aria-label="Cart"
+        >
+          <header class="mini-cart-header">
+            <h3>Cart (<span id="mini-cart-count">0</span>)</h3>
+            <button
+              class="close-menu"
+              id="mini-cart-close"
+              aria-label="Close cart"
+            >
+              ×
+            </button>
+          </header>
+          <div class="mini-cart-items" id="mini-cart-items"></div>
+          <div class="mini-cart-footer">
+            <div class="mini-cart-subtotal">
+              Subtotal <strong id="mini-cart-subtotal">₦0</strong>
+            </div>
+            <div class="mini-cart-actions">
+              <a href="cart.html" class="btn">View Cart</a>
+              <button id="mini-cart-checkout" class="btn btn-primary">
+                Checkout
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="mini-cart-backdrop" id="mini-cart-backdrop"></div>
+      </div>
+    </header>
+
+    <!-- =====================================================
+     ACCOUNT PAGE
+     ===================================================== -->
+
+    <main class="account-page">
+      <div class="container">
+        <!-- ACCOUNT HEADER -->
+        <header class="account-header">
+          <span class="account-eyebrow">OAK & ASH / Account</span>
+
+          <h1>My Account</h1>
+
+          <p>
+            Manage your orders, saved pieces, account details, and preferences
+            from one place.
+          </p>
+        </header>
+
+        <!-- ACCOUNT LAYOUT -->
+        <div class="account-layout">
+          <!-- SIDEBAR -->
+          <aside class="account-sidebar">
+            <nav aria-label="Account navigation">
+              <a href="#overview" class="active">
+                <span>Overview</span>
+                <span class="account-number">01</span>
+              </a>
+
+              <a href="#orders">
+                <span>Orders</span>
+                <span class="account-number">02</span>
+              </a>
+
+              <a href="favorites.html">
+                <span>Wishlist</span>
+                <span class="account-number">03</span>
+              </a>
+
+              <a href="#details">
+                <span>Account Details</span>
+                <span class="account-number">04</span>
+              </a>
+
+              <a href="#addresses">
+                <span>Addresses</span>
+                <span class="account-number">05</span>
+              </a>
+
+              
+            </nav>
+          </aside>
+
+          <!-- ACCOUNT CONTENT -->
+          <div class="account-content">
+            <!-- WELCOME -->
+            <section class="account-welcome" id="overview">
+              <span class="account-welcome-label"> Welcome back </span>
+
+              <h2>Your OAK & ASH account</h2>
+
+              <p>
+                Keep track of your purchases, save your favourite furniture, and
+                manage your account information.
+              </p>
+            </section>
+
+            <!-- QUICK ACCESS CARDS -->
+            <section class="account-card-grid">
+              <!-- ORDERS -->
+              <article class="account-card">
+                <div>
+                  <span class="account-card-label"> Orders </span>
+
+                  <h3>Your Orders</h3>
+
+                  <p>View your recent purchases and track your deliveries.</p>
+                </div>
+
+                <a href="#orders"> View orders <span>→</span> </a>
+              </article>
+
+              <!-- WISHLIST -->
+              <article class="account-card">
+                <div>
+                  <span class="account-card-label"> Saved </span>
+
+                  <h3>Wishlist</h3>
+
+                  <p>Revisit furniture and décor you've saved for later.</p>
+                </div>
+
+                <a href="favorites.html"> View wishlist <span>→</span> </a>
+              </article>
+
+              <!-- DETAILS -->
+              <article class="account-card" id="details">
+                <div>
+                  <span class="account-card-label"> Personal </span>
+
+                  <h3>Account Details</h3>
+
+                  <p>
+                    Manage your name, email address, and account preferences.
+                  </p>
+                </div>
+
+                <a href="#details"> Manage details <span>→</span> </a>
+              </article>
+
+              <!-- ADDRESSES -->
+              <article class="account-card" id="addresses">
+                <div>
+                  <span class="account-card-label"> Delivery </span>
+
+                  <h3>Addresses</h3>
+
+                  <p>Save your preferred delivery and billing addresses.</p>
+                </div>
+
+                <a href="#addresses"> Manage addresses <span>→</span> </a>
+              </article>
+            </section>
+
+            <!-- RECENT ORDERS -->
+            <section class="account-section" id="orders">
+              <div class="account-section-header">
+                <div>
+                  <span class="account-section-eyebrow"> Your activity </span>
+
+                  <h2>Recent Orders</h2>
+                </div>
+
+                <a href="#orders"> View all </a>
+              </div>
+
+              <div class="orders-empty">
+                <span class="orders-empty-number"> 00 </span>
+
+                <h3>No orders yet</h3>
+
+                <p>
+                  When you place an order, your purchases and delivery
+                  information will appear here.
+                </p>
+
+                <a href="products.html" class="btn btn-primary">
+                  Explore the collection
+                </a>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-columns">
+          <div class="footer-col footer-brand">
+            <a class="logo" href="index.html"
+              ><img
+                class="brand-logo"
+                src="IMAGES/Document-removebg-preview.png"
+                alt="OAK & ASH logo"
+            /></a>
+            <p class="footer-desc">
+              Handcrafted furniture • Sustainable wood • Built to last
+            </p>
+          </div>
+
+          <div class="footer-col">
+            <h4>Shop</h4>
+            <ul>
+              <li><a href="products.html">All Products</a></li>
+              <li><a href="products.html">Living</a></li>
+              <li><a href="products.html">Dining</a></li>
+              <li><a href="products.html">Bedroom</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="about.html">About</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Press</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Support</h4>
+            <ul>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Shipping & Returns</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col newsletter-col">
+            <h4>Newsletter</h4>
+            <p>Get styling tips, new arrivals and exclusive offers.</p>
+            <form class="footer-newsletter" action="#" method="post">
+              <input
+                type="email"
+                name="email"
+                placeholder="Enter your email"
+                aria-label="Email address"
+              />
+              <button class="btn" type="submit">Subscribe</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
